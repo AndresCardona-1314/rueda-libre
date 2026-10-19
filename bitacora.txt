@@ -1,1 +1,22 @@
-http://127.0.0.1:5500/index.html
+
+
+URL completa: http://127.0.0.1:5500/index.html
+
+
+al direccionar la pagina a una pagina inesistente se genera el error 404 Not Found, que basicamente significa que la página no fue encontrada
+
+
+
+Rol HTML: El rol que cumplirá html es el de generar la estructura base de la página web para que luego el navegador pueda traducir dicho lenguaje. Es decir acá se estrutura todo el encabezado y cuerpo de la pagina(s)
+
+Rol CSS: El rol de CSS es pulir y darle una mejor apariencia a la pagina web. Es decir, elegir paleta de colores y tipo de letra.
+
+Rol JavaScript: El rol de JavaScript es todo el código base de lo que queremos que suceda con cada acción que se ejecute dentro de la página.
+
+
+
+
+
+
+
+
