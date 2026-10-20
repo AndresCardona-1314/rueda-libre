@@ -2,10 +2,18 @@
 
 URL completa: http://127.0.0.1:5500/index.html
 
+protocolo: http://
+Host: 127.0.0.1
+Puerto: 5500
+Ruta: /index.html
+Metodo Petición: GET
+Código Estado: 304 Not Modified
 
-al direccionar la pagina a una pagina inesistente se genera el error 404 Not Found, que basicamente significa que la página no fue encontrada
+RUTA inesistente
 
+al direccionar la página a una página inesistente se genera el error 404 Not Found, que basicamente significa que la página no fue encontrada
 
+ROLES
 
 Rol HTML: El rol que cumplirá html es el de generar la estructura base de la página web para que luego el navegador pueda traducir dicho lenguaje. Es decir acá se estrutura todo el encabezado y cuerpo de la pagina(s)
 
