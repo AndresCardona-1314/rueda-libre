@@ -40,6 +40,96 @@
                 </dl>
             </article>
         </section>
+
+        <section>
+            <h2>Realiza tu reserva aquí:</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Tus datos</legend>
+                    <p>
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="3">
+                    </p>
+                    <p>
+                        <label for="identificacion">Número de identificación</label>
+                        <input type="number" id="identificacion" name="identificacion" required pattern="[0-9]{6,10}">
+                    </p>
+                    <p>
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </p>
+                    <p>
+                        <label for="celular">Número de celular</label>
+                        <input type="number" id="celular" name="celular" required pattern="3[0-9]{9}" maxlength="10">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tu alquiler</legend>
+                    <p>
+                        <label for="fecha">Fecha del alquiler</label>
+                        <input type="date" id="fecha" name="fecha" required min="2026-11-01" max="2026-12-31">
+                    </p>
+                    <p>
+                        <label for="bicicleta">Tipo de bicicleta</label>
+                        <select id="bicicleta" name="bicicleta" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="ruta">Bicicleta urbana</option>
+                            <option value="montaña">Bicicleta de montaña</option>
+                            <option value="electrica">Bicicleta eléctrica</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="plan">Tipo de plan</label>
+                        <select id="plan" name="plan" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="1hora">1 hora</option>
+                            <option value="mediodia">Medio día</option>
+                            <option value="diacompleto">Día completo</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="cantidad">Cantidad de bicicletas</label>
+                        <input type="number" id="cantidad" name="cantidad" required min="1" max="6">
+                    </p>
+                    <p>
+                        <label for="recorrido">Selecciona tu recorrido guiado</label>
+                        <select id="recorrido" name="recorrido" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="ninguno">Ninguno</option>
+                            <option value="rio">Río y parques</option>
+                            <option value="barrio">Sabores de barrio</option>
+                            <option value="palmas">Reto las palmas</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Confirma tu reserva</legend>
+                    <p>
+                        <label for="ConfDatos">¿Confirmas que tus datos están correctamente diligenciados?</label>
+                        <input type="checkbox" id="ConfDatos" name="ConfDatos" required>
+                    </p>
+                    <p>
+                        <label for="PolAlquiler">¿Aceptas las políticas de alquiler?</label>
+                        <input type="checkbox" id="PolAlquiler" name="PolAlquiler" required>
+                    </p>
+                    <p>
+                        <label for="comentarios">Comentarios</label>
+                        <textarea id="comentarios" name="comentarios" maxlength="300"></textarea>
+                    </p>
+                </fieldset>
+
+
+
+
+
+            </form>
+
+
+
+
+        </section>
     </main>
 
     <footer>
