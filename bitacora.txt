@@ -111,3 +111,25 @@ Esquema previo a la modificación del código. Las etiquetas entre < > indican l
 <footer>
   Nombre del negocio, correo electrónico y derechos de autor
 </footer>
+
+-----------------------------------
+
+Justificación creación de formulario:
+
+
+Select: Se utilizo el select/option debido a que es el que mejor se adaptaba para la parte de la selección de la bicicleta, tipo de plan y ruta. Es más amigable con una lista desplegable.
+Input: Se utilizo el input type="email" para generar una casilla que permita en ese campo solo datos que contengan la estructura estandar de una dirección de correo electrónico.
+Input: Se utilizo el input type="date" para generar una casilla que solo permitiera datos tipo fecha. Generando así una ventana emergente tipo calendario que a su vez solo permite colocar fechas dentro de un rango específico.
+
+
+
+
+-----------------------------------------
+
+
+PRUEBAS FORMULARIO
+
+
+
+campo correo: Arroja una alerta cuando no detecta la estructura estándar de una dirección de correo eléctronico.
+Campo cantidad de bicicletas: Arrooja una alerta cuando se pone un número mayor a 6 o menor a 1
