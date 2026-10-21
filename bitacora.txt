@@ -22,9 +22,92 @@ Rol CSS: El rol de CSS es pulir y darle una mejor apariencia a la pagina web. Es
 Rol JavaScript: El rol de JavaScript es todo el código base de lo que queremos que suceda con cada acción que se ejecute dentro de la página.
 
 
+TABLA DE RUTAS UTILIZADAS
+Archivo de origen     | Destino                                   | Ruta escrita
+index.html            | Logo                                      | img/Logo_Rueda_Libre.png
+index.html            | Imagen de bicicletas                      | img/Bicicletas.png
+index.html            | Imagen de recorridos guiados              | img/Recorridos_Guiados.png
+index.html            | Sección "Encuéntranos" de la misma página | #encuentranos
+index.html            | Inicio                                    | ../index.html
+index.html            | Tarifas y rutas                           | ../paginas/tarifas.html
+index.html            | Reservas                                  | ../paginas/reservas.html
+index.html            | Sección de tarifas de alquiler            | ../paginas/tarifas.html#TarifasAlquiler
+index.html            | Sección de tarifas de recorridos          | ../paginas/tarifas.html#TarifasRecorridos
+paginas/tarifas.html  | Logo                                      | ../img/Logo_Rueda_Libre.png
+paginas/tarifas.html  | Inicio                                    | ../index.html
+paginas/tarifas.html  | Tarifas y rutas                           | ../paginas/tarifas.html
+paginas/tarifas.html  | Reservas                                  | ../paginas/reservas.html
+paginas/reservas.html | Logo                                      | ../img/Logo_Rueda_Libre.png
+paginas/reservas.html | Inicio                                    | ../index.html
+paginas/reservas.html | Tarifas y rutas                           | ../paginas/tarifas.html
+paginas/reservas.html | Reservas                                  | ../paginas/reservas.html
+
+Nota: en index.html las rutas que empiezan con ../ suben fuera de la carpeta del sitio; las demás rutas relativas a archivos y secciones se indican tal como están escritas en el código.
 
 
 
 
+ESQUEMA DE REGIONES SEMÁNTICAS DE LAS PÁGINAS
+Esquema previo a la modificación del código. Las etiquetas entre < > indican la estructura semántica propuesta.
 
+1. Página principal — index.html
+<header>
+  Logo, título "Rueda Libre", bienvenida y enlace para ir a "Encuéntranos"
+</header>
+<nav>
+  Enlaces: Inicio, Tarifas y rutas, Reservar ahora
+</nav>
+<main>
+  <section>¿Quiénes somos?</section>
+  <section>Nuestros servicios
+    <article>Alquiler de bicicletas</article>
+    <article>Recorridos guiados por Medellín</article>
+    <article>Taller de reparación y mantenimiento</article>
+  </section>
+  <section>¿Cómo alquilar tu bicicleta?</section>
+  <aside>Beneficios del servicio (información complementaria relacionada con los servicios)</aside>
+  <section id="encuentranos">Encuéntranos: dirección y correo de contacto</section>
+</main>
+<footer>
+  Nombre del negocio, correo electrónico y derechos de autor
+</footer>
 
+2. Página de tarifas — paginas/tarifas.html
+<header>
+  Logo y título de la página: Tarifas y rutas
+</header>
+<nav>
+  Enlaces: Inicio, Tarifas y rutas, Reservar ahora
+</nav>
+<main>
+  <section id="TarifasAlquiler">
+    <article>Tabla de tarifas de alquiler de bicicletas</article>
+  </section>
+  <section id="TarifasRecorridos">
+    <article>Tabla de tarifas de recorridos guiados</article>
+  </section>
+  <aside>
+    Información complementaria: qué incluyen las tarifas, horarios, qué llevar y enlace para reservar
+  </aside>
+</main>
+<footer>
+  Nombre del negocio, correo electrónico, derechos de autor y enlace para volver al inicio
+</footer>
+
+3. Página de reservas — paginas/reservas.html
+<header>
+  Logo y título "Rueda Libre | Reservas"
+</header>
+<nav>
+  Enlaces: Inicio, Tarifas y rutas, Reservar ahora
+</nav>
+<main>
+  <section>Horario de atención
+    <article>Horarios de lunes a viernes</article>
+    <article>Horarios de sábados, domingos y festivos</article>
+  </section>
+  <aside>No hay contenido complementario independiente en esta página; no se agrega un aside artificial.</aside>
+</main>
+<footer>
+  Nombre del negocio, correo electrónico y derechos de autor
+</footer>
