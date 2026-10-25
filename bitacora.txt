@@ -1,56 +1,64 @@
+# Bitácora
 
+## Solicitud HTTP
 
-URL completa: http://127.0.0.1:5500/index.html
+- **URL completa:** `http://127.0.0.1:5500/index.html`
+- **Protocolo:** `http://`
+- **Host:** `127.0.0.1`
+- **Puerto:** `5500`
+- **Ruta:** `/index.html`
+- **Método de petición:** `GET`
+- **Código de estado:** `304 Not Modified`
 
-protocolo: http://
-Host: 127.0.0.1
-Puerto: 5500
-Ruta: /index.html
-Metodo Petición: GET
-Código Estado: 304 Not Modified
+## RUTA inesistente
 
-RUTA inesistente
+Al direccionar la página a una página inesistente se genera el error `404 Not Found`, que basicamente significa que la página no fue encontrada.
 
-al direccionar la página a una página inesistente se genera el error 404 Not Found, que basicamente significa que la página no fue encontrada
+## ROLES
 
-ROLES
+### Rol HTML
 
-Rol HTML: El rol que cumplirá html es el de generar la estructura base de la página web para que luego el navegador pueda traducir dicho lenguaje. Es decir acá se estrutura todo el encabezado y cuerpo de la pagina(s)
+El rol que cumplirá html es el de generar la estructura base de la página web para que luego el navegador pueda traducir dicho lenguaje. Es decir acá se estrutura todo el encabezado y cuerpo de la pagina(s).
 
-Rol CSS: El rol de CSS es pulir y darle una mejor apariencia a la pagina web. Es decir, elegir paleta de colores y tipo de letra.
+### Rol CSS
 
-Rol JavaScript: El rol de JavaScript es todo el código base de lo que queremos que suceda con cada acción que se ejecute dentro de la página.
+El rol de CSS es pulir y darle una mejor apariencia a la pagina web. Es decir, elegir paleta de colores y tipo de letra.
 
+### Rol JavaScript
 
-TABLA DE RUTAS UTILIZADAS
-Archivo de origen     | Destino                                   | Ruta escrita
-index.html            | Logo                                      | img/Logo_Rueda_Libre.png
-index.html            | Imagen de bicicletas                      | img/Bicicletas.png
-index.html            | Imagen de recorridos guiados              | img/Recorridos_Guiados.png
-index.html            | Sección "Encuéntranos" de la misma página | #encuentranos
-index.html            | Inicio                                    | ../index.html
-index.html            | Tarifas y rutas                           | ../paginas/tarifas.html
-index.html            | Reservas                                  | ../paginas/reservas.html
-index.html            | Sección de tarifas de alquiler            | ../paginas/tarifas.html#TarifasAlquiler
-index.html            | Sección de tarifas de recorridos          | ../paginas/tarifas.html#TarifasRecorridos
-paginas/tarifas.html  | Logo                                      | ../img/Logo_Rueda_Libre.png
-paginas/tarifas.html  | Inicio                                    | ../index.html
-paginas/tarifas.html  | Tarifas y rutas                           | ../paginas/tarifas.html
-paginas/tarifas.html  | Reservas                                  | ../paginas/reservas.html
-paginas/reservas.html | Logo                                      | ../img/Logo_Rueda_Libre.png
-paginas/reservas.html | Inicio                                    | ../index.html
-paginas/reservas.html | Tarifas y rutas                           | ../paginas/tarifas.html
-paginas/reservas.html | Reservas                                  | ../paginas/reservas.html
+El rol de JavaScript es todo el código base de lo que queremos que suceda con cada acción que se ejecute dentro de la página.
 
-Nota: en index.html las rutas que empiezan con ../ suben fuera de la carpeta del sitio; las demás rutas relativas a archivos y secciones se indican tal como están escritas en el código.
+## TABLA DE RUTAS UTILIZADAS
 
+| Archivo de origen | Destino | Ruta escrita |
+| --- | --- | --- |
+| `index.html` | Logo | `img/Logo_Rueda_Libre.png` |
+| `index.html` | Imagen de bicicletas | `img/Bicicletas.png` |
+| `index.html` | Imagen de recorridos guiados | `img/Recorridos_Guiados.png` |
+| `index.html` | Sección "Encuéntranos" de la misma página | `#encuentranos` |
+| `index.html` | Inicio | `../index.html` |
+| `index.html` | Tarifas y rutas | `../paginas/tarifas.html` |
+| `index.html` | Reservas | `../paginas/reservas.html` |
+| `index.html` | Sección de tarifas de alquiler | `../paginas/tarifas.html#TarifasAlquiler` |
+| `index.html` | Sección de tarifas de recorridos | `../paginas/tarifas.html#TarifasRecorridos` |
+| `paginas/tarifas.html` | Logo | `../img/Logo_Rueda_Libre.png` |
+| `paginas/tarifas.html` | Inicio | `../index.html` |
+| `paginas/tarifas.html` | Tarifas y rutas | `../paginas/tarifas.html` |
+| `paginas/tarifas.html` | Reservas | `../paginas/reservas.html` |
+| `paginas/reservas.html` | Logo | `../img/Logo_Rueda_Libre.png` |
+| `paginas/reservas.html` | Inicio | `../index.html` |
+| `paginas/reservas.html` | Tarifas y rutas | `../paginas/tarifas.html` |
+| `paginas/reservas.html` | Reservas | `../paginas/reservas.html` |
 
+**Nota:** en index.html las rutas que empiezan con `../` suben fuera de la carpeta del sitio; las demás rutas relativas a archivos y secciones se indican tal como están escritas en el código.
 
+## ESQUEMA DE REGIONES SEMÁNTICAS DE LAS PÁGINAS
 
-ESQUEMA DE REGIONES SEMÁNTICAS DE LAS PÁGINAS
-Esquema previo a la modificación del código. Las etiquetas entre < > indican la estructura semántica propuesta.
+Esquema previo a la modificación del código. Las etiquetas entre `< >` indican la estructura semántica propuesta.
 
-1. Página principal — index.html
+### 1. Página principal — `index.html`
+
+```html
 <header>
   Logo, título "Rueda Libre", bienvenida y enlace para ir a "Encuéntranos"
 </header>
@@ -71,8 +79,11 @@ Esquema previo a la modificación del código. Las etiquetas entre < > indican l
 <footer>
   Nombre del negocio, correo electrónico y derechos de autor
 </footer>
+```
 
-2. Página de tarifas — paginas/tarifas.html
+### 2. Página de tarifas — `paginas/tarifas.html`
+
+```html
 <header>
   Logo y título de la página: Tarifas y rutas
 </header>
@@ -93,8 +104,11 @@ Esquema previo a la modificación del código. Las etiquetas entre < > indican l
 <footer>
   Nombre del negocio, correo electrónico, derechos de autor y enlace para volver al inicio
 </footer>
+```
 
-3. Página de reservas — paginas/reservas.html
+### 3. Página de reservas — `paginas/reservas.html`
+
+```html
 <header>
   Logo y título "Rueda Libre | Reservas"
 </header>
@@ -111,25 +125,42 @@ Esquema previo a la modificación del código. Las etiquetas entre < > indican l
 <footer>
   Nombre del negocio, correo electrónico y derechos de autor
 </footer>
+```
 
------------------------------------
+## Justificación creación de formulario
 
-Justificación creación de formulario:
+- **Select:** Se utilizo el select/option debido a que es el que mejor se adaptaba para la parte de la selección de la bicicleta, tipo de plan y ruta. Es más amigable con una lista desplegable.
+- **Input:** Se utilizo el input type="email" para generar una casilla que permita en ese campo solo datos que contengan la estructura estandar de una dirección de correo electrónico.
+- **Input:** Se utilizo el input type="date" para generar una casilla que solo permitiera datos tipo fecha. Generando así una ventana emergente tipo calendario que a su vez solo permite colocar fechas dentro de un rango específico.
 
+## PRUEBAS FORMULARIO
 
-Select: Se utilizo el select/option debido a que es el que mejor se adaptaba para la parte de la selección de la bicicleta, tipo de plan y ruta. Es más amigable con una lista desplegable.
-Input: Se utilizo el input type="email" para generar una casilla que permita en ese campo solo datos que contengan la estructura estandar de una dirección de correo electrónico.
-Input: Se utilizo el input type="date" para generar una casilla que solo permitiera datos tipo fecha. Generando así una ventana emergente tipo calendario que a su vez solo permite colocar fechas dentro de un rango específico.
+Las pruebas se realizaron en el navegador sobre cada campo por separado. Se verificó la validación nativa del formulario; cuando un campo no cumple una regla, el navegador lo marca como inválido e impide enviar el formulario.
 
+> Prueba cada regla enviando datos incorrectos. Registra en la bitácora una tabla de pruebas con: campo, dato de prueba, resultado esperado y resultado obtenido (mínimo 8 pruebas).
 
-
-
------------------------------------------
-
-
-PRUEBAS FORMULARIO
-
-
-
-campo correo: Arroja una alerta cuando no detecta la estructura estándar de una dirección de correo eléctronico.
-Campo cantidad de bicicletas: Arrooja una alerta cuando se pone un número mayor a 6 o menor a 1
+| Campo | Dato de prueba | Resultado esperado | Resultado obtenido |
+| --- | --- | --- | --- |
+| Nombre completo (required) | Vacío | Rechazar el campo por ser obligatorio | Inválido; el navegador solicita completar el campo. |
+| Nombre completo (minlength=3) | Al | Rechazar por tener menos de 3 caracteres | Inválido; el navegador indica que se requieren 3 caracteres. |
+| Identificación (required) | Vacío | Rechazar el campo por ser obligatorio | Inválido; el navegador solicita completar el campo. |
+| Identificación (pattern numérico) | 12AB567 | Rechazar letras; solo admite dígitos | Inválido; no coincide con el formato solicitado. |
+| Identificación (mínimo 6 dígitos) | 12345 | Rechazar por tener menos de 6 dígitos | Inválido; no coincide con el formato solicitado. |
+| Identificación (máximo 10 dígitos) | 12345678901 | No permitir más de 10 dígitos | El navegador limitó la entrada a 1234567890; quedó válida, sin permitir el carácter adicional. |
+| Correo electrónico (required) | Vacío | Rechazar el campo por ser obligatorio | Inválido; el navegador solicita completar el campo. |
+| Correo electrónico (type=email) | correo-invalido | Rechazar por no tener formato de correo | Inválido; el navegador indica que falta el carácter @. |
+| Celular (required) | Vacío | Rechazar el campo por ser obligatorio | Inválido; el navegador solicita completar el campo. |
+| Celular (debe iniciar en 3) | 2001234567 | Rechazar porque no inicia en 3 | Inválido; no coincide con el formato solicitado. |
+| Celular (10 dígitos) | 300123456 | Rechazar por tener menos de 10 dígitos | Inválido; no coincide con el formato solicitado. |
+| Fecha del alquiler (required) | Vacía | Rechazar el campo por ser obligatorio | Inválido; el navegador solicita completar el campo. |
+| Fecha del alquiler (mínimo 2026-11-01) | 2026-10-31 | Rechazar por ser anterior a la fecha mínima | Inválido; el navegador indica que debe ser 2026-11-01 o posterior. |
+| Fecha del alquiler (máximo 2026-12-31) | 2027-01-01 | Rechazar por superar la fecha máxima | Inválido; el navegador indica que debe ser 2026-12-31 o anterior. |
+| Tipo de bicicleta (required) | Sin seleccionar (valor vacío) | Rechazar porque es obligatorio elegir una opción | Inválido; el navegador solicita seleccionar una opción. |
+| Tipo de plan (required) | Sin seleccionar (valor vacío) | Rechazar porque es obligatorio elegir una opción | Inválido; el navegador solicita seleccionar una opción. |
+| Cantidad de bicicletas (required) | Vacía | Rechazar el campo por ser obligatorio | Inválido; el navegador solicita completar el campo. |
+| Cantidad de bicicletas (mínimo 1) | 0 | Rechazar por ser menor que 1 | Inválido; el navegador indica que el mínimo es 1. |
+| Cantidad de bicicletas (máximo 6) | 7 | Rechazar por superar 6 | Inválido; el navegador indica que el máximo es 6. |
+| Recorrido guiado (required) | Sin seleccionar (valor vacío) | Rechazar porque es obligatorio elegir una opción | Inválido; el navegador solicita seleccionar una opción. |
+| Confirmación de datos (required) | Casilla desmarcada | Rechazar porque debe marcarse | Inválido; el navegador solicita marcar la casilla. |
+| Aceptación de políticas (required) | Casilla desmarcada | Rechazar porque debe marcarse | Inválido; el navegador solicita marcar la casilla. |
+| Comentarios (maxlength=300) | Intento de escribir 301 caracteres | No permitir más de 300 caracteres | El navegador limitó el texto a 300 caracteres; no permitió ingresar el carácter 301. |
