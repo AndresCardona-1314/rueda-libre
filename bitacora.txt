@@ -164,3 +164,28 @@ Las pruebas se realizaron en el navegador sobre cada campo por separado. Se veri
 | Confirmación de datos (required) | Casilla desmarcada | Rechazar porque debe marcarse | Inválido; el navegador solicita marcar la casilla. |
 | Aceptación de políticas (required) | Casilla desmarcada | Rechazar porque debe marcarse | Inválido; el navegador solicita marcar la casilla. |
 | Comentarios (maxlength=300) | Intento de escribir 301 caracteres | No permitir más de 300 caracteres | El navegador limitó el texto a 300 caracteres; no permitió ingresar el carácter 301. |
+
+
+
+## PALETA DE COLORES
+
+
+
+|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| Combinación de colores                  | Contrast Ratio | WCAG AA normal text | WCAG AAA normal text | WCAG AA large text | WCAG AAA large text |
+|--------------------------------------------------------------------------------|-----------------------------------------------------------------|
+| Texto Azul Noche sobre Naranja Pedal    | 7.2:1          | PASS                | PASS                 | PASS               | PASS                |
+| Texto Azul Noche sobre Crema            | 14.82:1        | PASS                | PASS                 | PASS               | PASS                |
+| Texto Gris Asfalto sobre Crema          | 5.56:1         | PASS                | FAIL                 | PASS               | PASS                |
+| Texto Verde Ruta sobre Crema            | 4.93:1         | PASS                | FAIL                 | PASS               | PASS                |
+| Texto Blanco sobre Azul Noche           | 15.97:1        | PASS                | PASS                 | PASS               | PASS                |
+| Texto Blanco sobre Verde Ruta           | 5.31:1         | PASS                | FAIL                 | PASS               | PASS                | 
+| Texto Blanco sobre Naranja Pedal        | 2.21:1         | FAIL                | FAIL                 | FAIL               | FAIL                |
+| Texto Naranja Pedal sobre Crema         | 2.05:1         | FAIL                | FAIL                 | FAIL               | FAIL                |
+|--------------------------------------------------------------------------------------------------------------------------------------------------|
+
+
+
+
+
+
