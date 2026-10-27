@@ -14,8 +14,31 @@
 
 }
 
+*{
+    box-sizing: border-box;
+}
 
 
+
+body {
+    margin: 0;
+    font-family: var(--textos);
+    background-color: var(--crema);
+    color: var(--azul-noche)
+    font-weight: 400;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--titulos);
+    color: var(--azul-noche);
+    font-weight: 700;
+}
 
 
 
