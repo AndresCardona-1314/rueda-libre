@@ -207,3 +207,37 @@ No se hereda el margin ni el background-color
 | `.activo` | 0  | 1     | 0        | (0, 1, 0)     |
 
 **Causa:** `#menu a` tiene mayor especificidad porque contiene un ID, y un ID pesa más que una clase. Por eso su `color` (gris-asfalto) gana sobre el de `.activo` (verde-ruta). En DevTools, la declaración `color` de `.activo` aparece tachada en el panel Styles.
+
+
+----------------------------------
+
+## Medición de box-sizing en una tarjeta
+
+**Elemento medido:** `<article class="tarjeta">` en index.html
+**Condiciones de prueba:** `flex: none; width: 300px` aplicados temporalmente en DevTools.
+
+| Caso                  | width | padding (izq+der) | border (izq+der) | Ancho total |
+|-----------------------|-------|-------------------|------------------|-------------|
+| Antes: `content-box`  | 300px | 32px              | 4px              | 336px       |
+| Después: `border-box` | 300px | 32px (incluido)   | 4px (incluido)   | 300px       |
+
+**Conclusión:** con `content-box` el relleno y el borde se suman al `width` y la tarjeta mide más de lo declarado. Con `border-box` el `width` incluye ambos y la tarjeta mide exactamente lo declarado, lo que hace los cálculos de diseño más predecibles.
+
+
+--------------------
+
+## Resumen de la semana
+
+Mini reto 1: En este mini reto aprendí a construir la estructura base de la página de rueda-libre haciendo uso del lenguaje de html.
+
+Mini reto 2: En este mini reto aprendí a crear formularios haciendo uso de html.
+
+Mini reto 3: En este mini reto aprendí a darle un estilo a la página, cambiar toda su estructura visual.
+
+Qué mejoraría: Haría una profundización mayor en css y en la parte del DevTools ya que fueron las partes que me parecieron más enredadas hasta el momento.
+
+
+
+
+
+

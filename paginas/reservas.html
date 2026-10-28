@@ -28,9 +28,9 @@
         <nav id="menu">
             <h2>Menu de vinculos</h2>
             <ul>
-                <a href="../index.html">Inicio</a>
-                <a href="tarifas.html">Tarifas y rutas</a>
-                <a class="activo" href="reservas.html">Reservar ahora</a>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="tarifas.html">Tarifas y rutas</a></li>
+                <li><a class="activo" href="reservas.html">Reservar ahora</a></li>
             </ul>
         </nav>
     </header>
@@ -61,7 +61,7 @@
                     </p>
                     <p>
                         <label for="identificacion">Número de identificación</label>
-                        <input type="text" id="identificacion" name="identificacion" required pattern="[0-9]{6,10}" title="Ingresa entre 6 y 10 dígitos númericos, sin letras ni espacios" minlength="6" maxlength="10" inpuctmode="numeric" placeholder="Ej. 123456789">
+                        <input type="text" id="identificacion" name="identificacion" required pattern="[0-9]{6,10}" title="Ingresa entre 6 y 10 dígitos númericos, sin letras ni espacios" minlength="6" maxlength="10" inputmode="numeric" placeholder="Ej. 123456789">
                     </p>
                     <p>
                         <label for="correo">Correo electrónico</label>
@@ -115,11 +115,11 @@
 
                 <fieldset>
                     <legend>Confirma tu reserva</legend>
-                    <p>
+                    <p class="casilla">
                         <label for="ConfDatos">¿Confirmas que tus datos están correctamente diligenciados?</label>
                         <input type="checkbox" id="ConfDatos" name="ConfDatos" required>
                     </p>
-                    <p>
+                    <p class="casilla">
                         <label for="PolAlquiler">¿Aceptas las políticas de alquiler?</label>
                         <input type="checkbox" id="PolAlquiler" name="PolAlquiler" required>
                     </p>
@@ -128,7 +128,7 @@
                         <textarea id="comentarios" name="comentarios" maxlength="300"></textarea>
                     </p>
                 </fieldset>
-                <p><button type="submit">Enviar</button></p>
+                <p><button class="boton" type="submit">Enviar</button></p>
 
 
 
@@ -148,6 +148,8 @@
             <p>Copyright 2026</p>
         </address>
     </footer>
+
+    <a class="whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 
 </body>
 </html>
