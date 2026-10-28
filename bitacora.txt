@@ -185,10 +185,25 @@ Las pruebas se realizaron en el navegador sobre cada campo por separado. Se veri
 |--------------------------------------------------------------------------------------------------------------------------------------------------|
 
 
+---------------------------
+
+## HERENCIA
+
+Se hereda color y font-family para los demás <p> del body 
+
+No se hereda el margin ni el background-color
 
 
+------------------------------
 
 
+## Especificidad de selectores
 
+**Problema:** el enlace con clase `.activo` no cambia a verde.
 
+| Selector  | ID | Clase | Etiqueta | Especificidad |
+|-----------|----|-------|----------|---------------|
+| `#menu a` | 1  | 0     | 1        | (1, 0, 1)     |
+| `.activo` | 0  | 1     | 0        | (0, 1, 0)     |
 
+**Causa:** `#menu a` tiene mayor especificidad porque contiene un ID, y un ID pesa más que una clase. Por eso su `color` (gris-asfalto) gana sobre el de `.activo` (verde-ruta). En DevTools, la declaración `color` de `.activo` aparece tachada en el panel Styles.

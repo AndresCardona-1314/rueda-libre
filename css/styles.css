@@ -1,3 +1,6 @@
+
+/* Variables de color y tipografía */
+
 :root{
     --crema: #FAF6EF;
     --verde-ruta: #1E7A4F;
@@ -14,20 +17,26 @@
 
 }
 
-*{
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 
+/* Cuerpo */
 
 body {
-    margin: 0;
+    margin: 4;
     font-family: var(--textos);
     background-color: var(--crema);
-    color: var(--azul-noche)
-    font-weight: 400;
+    color: var(--azul-noche);
+   
 }
 
+
+/* Titulos */
 
 h1,
 h2,
@@ -40,5 +49,110 @@ h6 {
     font-weight: 700;
 }
 
+
+
+/* Menu de navegación */
+
+#menu a {
+     color: var(--gris-asfalto);
+ }
+
+#menu a.activo {
+     color: var(--verde-ruta);
+     font-weight: 600;
+ }
+
+#menu a:hover,
+#menu a:focus {
+    color: var(--naranja-pedal);
+    font-weight: 600;
+}
+
+/* Botones */
+
+.boton {
+    display: inline-block;
+    padding: var(--espaciado-mediano) var(--espaciado-grande);
+    background-color: var(--naranja-pedal);
+    color: var(--azul-noche);
+    font-family: var(--textos);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.boton:hover,
+.boton:focus {
+    background-color: var(--verde-ruta);
+    color: var(--crema);
+}
+
+.boton:active {
+    background-color: var(--azul-noche);
+    color: var(--crema);
+}
+
+#menu a:focus,
+.boton:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--azul-noche);
+    outline-offset: 1px;
+}
+
+
+/* Espaciado */
+
+main {
+    max-width: 60rem;
+    margin-inline: auto;
+    padding: var(--espaciado-mediano);
+}
+
+.portada {
+    min-height: 70vh;
+    
+}
+
+
+/* Sección de servicios */
+
+.lista-servicios {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaciado-grande);
+}
+
+.lista-servicios li {
+    flex: 1 1 0;
+    min-width: 15rem;
+    display: flex;
+}
+
+
+.tarjeta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: var(--espaciado-mediano);
+    border: 2px solid var(--gris-asfalto);
+    border-radius: 12px;
+    
+}
+
+.tarjeta img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+}
+
+.tarjeta .boton {
+    margin-top: auto;
+    align-self: flex-start;
+}
 
 
