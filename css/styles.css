@@ -55,7 +55,7 @@ h6 {
 /* Menu de navegación */
 
 #menu ul{
-    display: flex;
+    display: flex;  
     flex-wrap: wrap;
     gap: var(--espaciado-grande);
     list-style: none;
@@ -124,7 +124,14 @@ main {
 
 .portada {
     min-height: 70vh;
-    
+    text-align: center;
+}
+
+.portada img {
+    display: block;
+    margin-inline: auto;
+    max-width:  100%;
+    height: auto;
 }
 
 
@@ -285,6 +292,41 @@ button.boton {
 }
 
 
+/* encabezado página */
+
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espaciado-mediano);
+}
+
+.marca {
+    margin: 0;
+    font-family: var(--titulos);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.marca a {
+    color: var(--azul-noche);
+    text-decoration: none;
+}
+
+
+.pie-pagina {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--naranja-pedal);
+    color: var(--azul-noche)
+    
+}
 
 
 

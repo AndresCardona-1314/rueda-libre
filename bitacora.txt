@@ -237,7 +237,10 @@ Mini reto 3: En este mini reto aprendí a darle un estilo a la página, cambiar 
 Qué mejoraría: Haría una profundización mayor en css y en la parte del DevTools ya que fueron las partes que me parecieron más enredadas hasta el momento.
 
 
+----------------------
 
+# Semana 2
 
+Al estrechar la ventana del navegador ni el encabezado ni el pie de página se desbordan, por el contrario, si no cuentan con espacio horizontal, se desplazan verticalmente.
 
 

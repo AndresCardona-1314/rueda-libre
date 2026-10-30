@@ -21,20 +21,29 @@
 
 <body>
     <header class="portada">
-        <img src="img/Logo_Rueda_Libre.png" alt="Logo de Rueda Libre" width="600">
+      
+        <section class="barra-superior">
+            <p class="marca"><a href="index.html">Rueda Libre</a></p>
+
+
+            <nav id="menu">
+                
+                <ul>
+                    <li><a class="activo" href="index.html">Inicio</a></li>
+                    <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
+                    <li><a href="paginas/reservas.html">Reservar ahora</a></li>
+                </ul>
+            </nav>
+        </section>    
+       
+       
+        <img src="img/Logo_Rueda_Libre.png" alt="Logo de Rueda Libre">
         <h1>Rueda Libre | Alquiler de bicicletas y recorridos guiados por Medellín</h1>
         <p>Bienvenidos a este movimiento donde podras encontrar todo lo relacionado con el mundo de las bicicletas</p>
         <a class="boton" href="#encuentranos">Ir a encuéntranos</a>
     
 
-        <nav id="menu">
-            <h2>Menu de vinculos</h2>
-            <ul>
-                <li><a class="activo" href="index.html">Inicio</a></li>
-                <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
-                <li><a href="paginas/reservas.html">Reservar ahora</a></li>
-            </ul>
-        </nav>
+        
     </header>
 
     <main>
@@ -97,6 +106,34 @@
 
         </aside>
 
+        <section>
+            <h2>Nuestra flota</h2>
+            <p>Contamos con diferentes modelos de bicicletas a tu disposición: </p>
+            <ul>
+                <li>
+                    <article class="flota">
+                        <h3>Urbana Clásica</h3>
+                        <img src="img/bicicleta-clasica.png" alt="Bicicleta urbana clásica">
+                        <p>Cómoda y liviana para las ciclorrutas</p>
+                        <p><strong>Precio: $10000 por hora</strong></p>
+                        <a class="boton" href="paginas/reservas.html">Reservar</a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="flota">
+                        <h3>Urbana Plegable</h3>
+                        
+                    </article>
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+
         <section id="encuentranos">
             <h2>Encuéntranos</h2>
             <p>Visítanos en nuestra tienda ubicada en Medellín, donde podrás alquilar tu bicicleta y obtener más información sobre nuestros servicios.</p>
@@ -108,12 +145,33 @@
     </main>
 
 
-    <footer>
-        <p><em>Rueda Libre</em></p>
-        <address>
-            Correo electrónico: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a><br>
+    <footer class="pie-pagina">
+        <section>
+            <p><em>Rueda Libre</em></p>
             <p>Copyright 2026</p>
-        </address>
+        </section>
+        
+        <section>
+            <p>Contacto</p>
+            <address>
+                Correo electrónico: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a><br>
+                
+            </address>
+        </section>
+
+        <section>
+            <h2>Horario de atención:</h2>
+            <article>
+                <dl>
+                    <dt>lunes a viernes</dt>
+                        <dd>7:00 a.m.</dd>
+                        <dd>7:00 p.m.</dd>
+                    <dt>sábados, domingos y festivos</dt>  
+                        <dd>6:00 a.m.</dd>
+                        <dd>2:00 p.m.</dd>
+                </dl>
+            </article>
+        </section>
     </footer>
 
 
