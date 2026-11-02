@@ -249,6 +249,7 @@ input:not([type="checkbox"]),
 select,
 textarea {
     width: 100%;
+    max-width: 100%;
     padding: var(--espaciado-mediano);
     border: 2px solid var(--gris-asfalto);
     border-radius: 8px;
@@ -256,6 +257,14 @@ textarea {
     font-size: 1rem;
     background-color: var(--crema);
     color: var(--azul-noche);
+}
+
+input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 3.25rem;
 }
 
 textarea {
