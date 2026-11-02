@@ -244,3 +244,101 @@ Qué mejoraría: Haría una profundización mayor en css y en la parte del DevTo
 Al estrechar la ventana del navegador ni el encabezado ni el pie de página se desbordan, por el contrario, si no cuentan con espacio horizontal, se desplazan verticalmente.
 
 
+-----------------------------
+
+
+## Columnas de la cuadrícula según el ancho
+
+
+| Ancho de pantalla | Columnas visibles |
+|-------------------|-------------------|
+| 1280 px           |       3           |
+| 900 px            |       3           |
+| 500 px            |       1           |
+
+---------------------------
+
+
+## Uso de flex y/o grid
+
+### Portada
+
+- **Modelo utilizado:** Grid.
+- **Selector y ubicación:** `.portada-principal`, definido en `css/styles.css` y aplicado a la portada principal de `index.html`.
+- **Justificación:** Grid permite dividir la portada en columnas y distribuir el texto y la imagen como áreas independientes. La propiedad `repeat(auto-fit, minmax(min(100%, 15rem), 1fr))` ajusta automáticamente el número de columnas y permite que el contenido se apile al reducir el ancho disponible. También se usan `justify-content: center` y `align-items: center` para centrar ambos elementos.
+
+### Galería
+
+- **Modelo utilizado:** Grid.
+- **Selectores y ubicación:** `.flota-bicicletas` para la galería de bicicletas y `.lista-rutas` para la galería de rutas, ambos definidos en `css/styles.css` y aplicados en `index.html`.
+- **Justificación:** Grid es adecuado porque las galerías requieren varias tarjetas organizadas visualmente en filas y columnas. Con `auto-fit` y un mínimo de `15rem`, el navegador crea automáticamente 3 columnas en pantallas amplias y 1 columna cuando el ancho es pequeño. Dentro de cada tarjeta se mantiene Flexbox en columna para colocar el botón al final.
+
+### Reservas
+
+- **Modelo utilizado:** Grid.
+- **Selector y ubicación:** `.formulario-reserva`, definido en `css/styles.css` y aplicado al contenedor principal del formulario y la información complementaria en `paginas/reservas.html`.
+- **Justificación:** Grid organiza claramente el formulario y el apartado lateral en dos columnas con proporción `2fr 1fr`. Es una estructura de dos áreas con tamaños definidos, por lo que Grid ofrece mejor control que Flexbox para distribuir el ancho principal y secundario.
+
+### Fila del formulario
+
+- **Modelo utilizado:** Flexbox.
+- **Selector y ubicación:** `.formulario-reserva-datos`, definido en `css/styles.css` y aplicado a la fila de identificación y celular en `paginas/reservas.html`.
+- **Justificación:** Flexbox distribuye los dos campos horizontalmente dentro de una sola fila y permite que se ajusten o envuelvan con `flex-wrap: wrap`. `justify-content: space-between` separa los campos, mientras que `gap` conserva el espacio entre ellos.
+
+### Encabezado
+
+- **Modelo utilizado:** Flexbox.
+- **Selector y ubicación:** `.barra-superior`, definido en `css/styles.css` y aplicado al encabezado de todas las páginas.
+- **Justificación:** El encabezado contiene dos elementos principales: la marca y el menú. Flexbox permite ubicarlos en los extremos mediante `justify-content: space-between`, centrarlos verticalmente y hacerlos pasar a otra línea con `flex-wrap: wrap` si no hay espacio suficiente.
+
+### Pie de pagina
+
+- **Modelo utilizado:** Flexbox.
+- **Selector y ubicación:** `.pie-pagina`, definido en `css/styles.css` y aplicado al `footer` de las páginas principales, de tarifas y de reservas.
+- **Justificación:** Flexbox distribuye las secciones informativas del pie en una fila, las centra verticalmente y permite envolverlas cuando el ancho disminuye. `justify-content: space-evenly` reparte el espacio entre nombre, contacto, horarios y enlaces, según la página correspondiente.
+
+
+
+---------------------------------
+
+
+## Pruebas responsive
+
+Se realizaron las pruebas con la herramienta de dispositivos del navegador DevTools en las páginas `index.html`, `paginas/reservas.html` y `paginas/tarifas.html`. Los anchos probados fueron **360 px, 768 px y 1280 px**. En cada tamaño se verificó el desbordamiento horizontal, la distribución del encabezado y el pie, las columnas de las galerías, el formulario y las tablas.
+
+### Resultados por ancho
+
+| Ancho | Comportamiento verificado | Resultado |
+| --- | --- | --- |
+| 360 px | Encabezado, menú, galerías, formulario, tablas y pie | No se encontró desbordamiento horizontal; las tarjetas, rutas y campos quedaron en una sola columna. |
+| 768 px | Encabezado, menú, galerías, formulario, tablas y pie | El encabezado recuperó una fila, las galerías mostraron dos columnas y el formulario quedó en una columna principal. |
+| 1280 px | Encabezado, menú, galerías, formulario, tablas y pie | El contenido principal quedó centrado, las rutas y la flota mostraron tres columnas, el formulario quedó dividido en `2fr 1fr` y las tablas ocuparon el contenedor sin desbordarse. |
+
+### Problemas encontrados y solución
+
+1. **El encabezado ocupaba poco espacio o se comprimía en pantallas móviles (360 px).**
+   - Se encontró una estructura horizontal no preparada para los enlaces del menú cuando el ancho era reducido.
+   - Se resolvió con `.barra-superior { flex-direction: column; align-items: center; }`, `#menu ul { flex-wrap: wrap; justify-content: center; }` y el salto a una fila mediante el media query desde **768 px**. Así el menú se mantiene centrado en móvil y vuelve a ocupar los extremos en tablet y escritorio.
+
+2. **Las galerías podían mostrar tarjetas demasiado estrechas o conservar un número inadecuado de columnas.**
+   - En 360 px se necesitaba una columna para conservar la legibilidad; en 768 px dos columnas resultaban apropiadas; desde 1200 px las rutas podían mostrar tres columnas.
+   - Se resolvió usando una cuadrícula de una columna por defecto, `repeat(2, 1fr)` desde 768 px para `.lista-rutas` y la flota adaptable, y `repeat(3, 1fr)` desde 1200 px para las rutas.
+
+3. **El formulario y la información complementaria estaban pensados para escritorio y podían quedar excesivamente estrechos en móvil o tablet.**
+   - En 360 px y 768 px el contenedor principal debía ocupar una sola columna; a 1280 px debía separar el formulario y el aside.
+   - Se resolvió configurando `.formulario-reserva` inicialmente en una columna, cambiando la fila de identificación y celular a columna en móvil y fila flexible desde 768 px, y usando dos columnas con `2fr 1fr` desde 1200 px.
+
+4. **Las tablas de tarifas podían resultar difíciles de leer en 360 px.**
+   - Al reducirse el ancho, varias columnas y textos podían comprimir el contenido y provocar desbordamiento horizontal.
+   - Se resolvió reduciendo el padding y el tamaño de fuente en móvil, utilizando `overflow-wrap: anywhere` en `th` y `td`, `width: 100%` en las tablas y ajustando el tamaño y espaciado desde el breakpoint de 768 px. La prueba mostró tablas de 297 px de ancho en 360 px, sin desbordamiento respecto al contenedor.
+
+
+### Verificación final
+
+Se verificó que las tres páginas probadas tienen `scrollWidth === clientWidth` en los anchos **360 px, 768 px y 1280 px**; es decir, no existe desbordamiento horizontal de la página. La prueba confirmó además:
+
+- 360 px: una columna en galerías y formulario, menú y pie apilados.
+- 768 px: encabezado horizontal, dos columnas en las galerías y pie distribuido en fila.
+- 1280 px: contenido centrado con ancho máximo, tres columnas en rutas, tres columnas en la flota y formulario principal dividido en dos áreas.
+
+
