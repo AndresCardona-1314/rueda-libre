@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tarifas Rueda Libre">
     <title>Tarifas | Rueda Libre </title> 
+    <link rel="icon" href="img/Logo_Rueda_Libre.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-   <link rel="stylesheet" href="../css/styles.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="../css/styles.css">
     
 </head>
 
@@ -48,79 +51,83 @@
 
     <section style="margin-bottom: 40px"> </section>
     
-    <main>
-        <section id="TarifasAlquiler">
-            <article>
-                <table border="1">
-                    <caption><strong>Tarifas alquiler de bicicletas</strong></caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Tipo de bicicleta</th>
-                            <th scope="col">1 hora</th>
-                            <th scope="col">Medio día (4h)</th>
-                            <th scope="col">Día completo</th>
+    <main class="container py-4">
+        <div class="row g-4">
+            <div class="col-12 col-lg-8">
+                <section id="TarifasAlquiler">
+                    <article>
+                        <table class="table-responsive">
+                            <caption class="m-4"><strong>Tarifas alquiler de bicicletas</strong></caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tipo de bicicleta</th>
+                                    <th scope="col">1 hora</th>
+                                    <th scope="col">Medio día (4h)</th>
+                                    <th scope="col">Día completo</th>
 
-                        </tr>
+                                </tr>
 
-                    </thead>
+                            </thead>
 
-                    <tbody>
-                        <tr><td>Urbana</td><td>$10.000</td><td>$30.000</td><td>$50.000</td></tr>
-                        <tr><td>Montaña</td><td>$15.000</td><td>$45.000</td><td>$70.000</td></tr>
-                        <tr><td>Eléctrica</td><td>$25.000</td><td>$70.000</td><td>$110.000</td></tr>
-                    </tbody>    
+                            <tbody>
+                                <tr><td>Urbana</td><td>$10.000</td><td>$30.000</td><td>$50.000</td></tr>
+                                <tr><td>Montaña</td><td>$15.000</td><td>$45.000</td><td>$70.000</td></tr>
+                                <tr><td>Eléctrica</td><td>$25.000</td><td>$70.000</td><td>$110.000</td></tr>
+                            </tbody>    
 
-                </table>
-            </article>
-        </section>
+                        </table>
+                    </article>
+                </section>
 
-        <section style="margin-bottom: 40px"> </section>
+               
 
-        <section id="TarifasRecorridos">
-            <article>
-                <table border="1">
-                    <caption><strong>Tarifas recorridos guiados</strong></caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Recorrido</th>
-                            <th scope="col">Distancia</th>
-                            <th scope="col">Duración</th>
-                            <th scope="col">Nivel</th>
-                            <th scope="col">Precio por persona</th>
-                        </tr>
-                    </thead>
+                <section id="TarifasRecorridos" class="mt-4">
+                    <article>
+                        <table class="table-responsive">
+                            <caption class="m-4"><strong>Tarifas recorridos guiados</strong></caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Recorrido</th>
+                                    <th scope="col">Distancia</th>
+                                    <th scope="col">Duración</th>
+                                    <th scope="col">Nivel</th>
+                                    <th scope="col">Precio por persona</th>
+                                </tr>
+                            </thead>
 
-                    <tbody>
-                        <tr><td>Río y Parques</td><td>12 km</td><td>2 h</td><td>Fácil</td><td>$45.000</td></tr>
-                        <tr><td>Sabores de barrio</td><td>18 km</td><td>3 h</td><td>Medio</td><td>$60.000</td></tr>
-                        <tr><td>Reto Las Palmas</td><td>25 km</td><td>4 h</td><td>Difícil</td><td>$85.000</td></tr>
-                    </tbody>
+                            <tbody>
+                                <tr><td>Río y Parques</td><td>12 km</td><td>2 h</td><td>Fácil</td><td>$45.000</td></tr>
+                                <tr><td>Sabores de barrio</td><td>18 km</td><td>3 h</td><td>Medio</td><td>$60.000</td></tr>
+                                <tr><td>Reto Las Palmas</td><td>25 km</td><td>4 h</td><td>Difícil</td><td>$85.000</td></tr>
+                            </tbody>
 
-                </table>
-            </article>
+                        </table>
+                    </article>
+                    
+                
+                </section>
+            </div>
+
             
-        
-        </section>
 
-        <section style="margin-bottom: 40px"> </section>
+            <aside class="col-12 col-lg-4 mt-4">
+                <p>Todas las tarifas incluyen casco y candado</p>
+                <p>Los recorridos salen <strong>sábados y domingos a las 7 a.m.</strong></p>
+                <p>¿Qué llevar?:</p>
+                <ul>
+                    <li>Ropa cómoda</li>
+                    <li>Agua</li>
+                    <li>Protector solar</li>
+                    <li>Documento de identidad</li>
+                </ul>
 
-        <aside>
-            <p>Todas las tarifas incluyen casco y candado</p>
-            <p>Los recorridos salen <strong>sábados y domingos a las 7 a.m.</strong></p>
-            <p>¿Qué llevar?:</p>
-            <ul>
-                <li>Ropa cómoda</li>
-                <li>Agua</li>
-                <li>Protector solar</li>
-                <li>Documento de identidad</li>
-            </ul>
-
-            <section style="margin-bottom: 20px"> </section>
-            
-            <a class="boton" href="../paginas/reservas.html">Reservar ahora</a>
+                
+                
+                <a class="boton mt-4" href="../paginas/reservas.html">Reservar ahora</a>
 
 
-        </aside>
+            </aside>
+        </div>
     </main>
 
 
@@ -158,6 +165,8 @@
     </footer>
 
     <a class="whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>

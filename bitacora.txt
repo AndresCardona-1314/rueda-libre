@@ -383,5 +383,85 @@ Se verificó que las tres páginas probadas tienen `scrollWidth === clientWidth`
 - **`text-start`**: alinea el texto al inicio de su contenedor según la dirección de lectura. En este documento también es una utilidad responsive disponible desde cualquier tamaño de pantalla.
 - **`d-none` / `d-md-block`**: `d-none` oculta un elemento y `d-md-block` lo muestra como bloque desde el breakpoint `md`. En la sección final, la combinación mantiene oculta la imagen decorativa en móvil y la muestra en pantallas medianas o mayores.
 
+-------------------------------
+
+## Conflictos entre css y bootstrap
 
 
+- **grosor del texto**: En el css se definio un grosor y tipo de texto para cada una de las clases de títulos habían conflictos debido a que en ciertas líneas se estaba utilizando fw-bold y/o semibold. Se solucionó borrando estas clases del bootstrap para trabajar solo con la estructura definida en el css.
+- **Alineación de textos**: En algunas líneas de código  el texto ya tiene ciertas alineaciones definidas en el css. Se eliminan las que se repiten en el bootstrap.
+
+**NOTA**: Los demás conflictos son con respecto a configuraciones preestablecidas del bootstrap, por ejemplo, en los títulos. Sin embargo, acá no se modifica nada ya que por la cascada se terminan aplicando los definidos en el css.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Comparativa v1.5 frente a Bootstrap
+
+| Versión | Líneas de css/styles.css | Tiempo invertido |
+|---|---:|---:|
+| v1.5 — CSS propio (`4cc49cc`) | 545 | ___ minutos |
+| Versión actual — Bootstrap + CSS propio | 466 | ___ minutos |
+
+## Ventajas de la v1.5 con CSS propio
+
+- El diseño dependía únicamente de reglas escritas en el proyecto.
+- Las cuadrículas y los breakpoints tenían nombres definidos por nosotros.
+- Permitió aprender flexbox, media queries y distribución responsiva.
+- El archivo dejó muy claro qué tamaños y colores pertenecen al proyecto.
+
+## Desventajas de la v1.5 con CSS propio
+
+- El archivo necesitó muchas más líneas.
+- Las cuadrículas, márgenes y breakpoints debían escribirse manualmente.
+- Existían más posibilidades de desbordamiento.
+- Modificar una distribución en varias páginas requería revisar varias reglas.
+- Repetir estructuras flexibles aumentaba el tiempo de desarrollo.
+
+## Ventajas observadas con Bootstrap
+
+- Permite crear columnas mediante `row` y `col-*`.
+- Los breakpoints `md`, `lg` y `xl` ya están definidos.
+- Reduce reglas duplicadas de distribución.
+- Acelera la creación de formularios, contenedores y cuadrículas.
+- Permite combinar utilidades y estilos propios.
+
+## Desventajas observadas con Bootstrap
+
+- El HTML contiene más clases.
+- Algunas utilidades pueden reemplazar reglas visuales propias.
+- Es necesario comprobar la cascada entre Bootstrap y `styles.css`.
+- Bootstrap introduce estilos predeterminados que deben personalizarse.
+- La cuadrícula no elimina la necesidad de revisar espacios, tamaños y accesibilidad.
+
+## Conclusión
+
+La versión v1.5 permitió construir la distribución completamente con CSS propio.
+La versión actual conserva la identidad visual del proyecto y delega a Bootstrap
+la distribución responsiva. Bootstrap reduce las líneas necesarias para organizar
+contenedores y columnas, mientras que `styles.css` debe conservar únicamente
+colores, tipografía, botones, tablas, tarjetas, formularios y estados visuales.
