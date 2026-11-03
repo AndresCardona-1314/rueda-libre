@@ -18,6 +18,7 @@
 
 }
 
+/* Usado por index.html reservas.html y tarifas.html */
 
 *,
 *::before,
@@ -26,6 +27,7 @@
 }
 
 /* Imagenes */
+/* Usado por index.html reservas.html y tarifas.html */
 
 img {
     max-width: 100%;
@@ -34,6 +36,7 @@ img {
 
 
 /* Cuerpo */
+/* Usado por index.html reservas.html y tarifas.html */
 
 body {
     margin: 8px;
@@ -45,6 +48,7 @@ body {
 
 
 /* Titulos */
+/* Usado por index.html reservas.html y tarifas.html */
 
 h1,
 h2,
@@ -61,6 +65,7 @@ h6 {
 
 
 /* Menu de navegación */
+/* Usado por index.html reservas.html y tarifas.html */
 
 #menu ul{
     display: flex;  
@@ -90,6 +95,7 @@ h6 {
 }
 
 /* Botones */
+/* Usado por index.html reservas.html y tarifas.html */
 
 .boton {
     display: inline-block;
@@ -124,6 +130,7 @@ textarea:focus {
 
 
 /* Espaciado */
+/* Usado por index.html reservas.html y tarifas.html */
 
 main {
     max-width: 60rem;
@@ -131,10 +138,14 @@ main {
     padding: var(--espaciado-mediano);
 }
 
+/* Usado por index.html reservas.html y tarifas.html */
+
 .portada {
     min-height: 50vh;
     text-align: center;
 }
+
+/* Usado por index.html reservas.html y tarifas.html */
 
 .portada img {
     display: block;
@@ -145,6 +156,7 @@ main {
 
 
 /* Sección de servicios */
+/* usado por index.html */
 
 .lista-servicios {
     list-style: none;
@@ -197,7 +209,7 @@ main {
 
 
 /* Tablas tarifas*/
-
+/* Usado por tarifas.html */
 
 table {
     width: 100%;
@@ -220,6 +232,7 @@ th {
 
 
 /* Formulario */
+/* Usado por reservas.html */
 
 fieldset {
     min-width: 0;
@@ -306,6 +319,7 @@ button.boton {
 
 
 /* whatsapp*/
+/* Usado por index.html reservas.html y tarifas.html */
 
 .whatsapp {
     position: fixed;
@@ -328,6 +342,7 @@ button.boton {
 
 
 /* encabezado página */
+/* Usado por index.html reservas.html y tarifas.html */
 
 .barra-superior {
     display: flex;
@@ -349,6 +364,7 @@ button.boton {
     text-decoration: none;
 }
 
+/* usado por index.html reservas.html y tarifas.html */
 
 .pie-pagina {
     display: flex;
@@ -365,104 +381,6 @@ button.boton {
 
 
 
-/* Flota de bicicletas */
-
-.flota-bicicletas {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-    gap: var(--espaciado-grande);
-}
-
-.flota-bicicletas li {
-    display: flex;
-}
-
-.flota {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: var(--espaciado-mediano);
-    border: 2px solid var(--gris-asfalto);
-    border-radius: 12px;
-}
-
-.flota .boton {
-    margin-top: auto;
-    align-self: flex-start;
-}
-
-.flota img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: contain;
-    background-color: var(--crema);
-    
-}
-
-
-/* Portada principal */
-
-.portada-principal {
-    min-height: 50vh;
-    text-align: center;
-    display: grid;
-    grid-template-columns:  1fr;    
-    align-items: center;
-    gap: var(--espaciado-mediano);
-}
-
-.portada-principal img {
-    display: block;
-    width: 100%;
-    max-width: 30rem;
-    aspect-ratio: 4/3;
-    object-fit: contain;
-    background-color: var(--crema);
-}
-
-
-/* Nuestras rutas */
-
-.lista-rutas {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns:  1fr;
-    gap: var(--espaciado-grande);
-}
-
-.lista-rutas li {
-    display: flex;
-}
-
-.ruta {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: var(--espaciado-mediano);
-    border: 2px solid var(--gris-asfalto);
-    border-radius: 12px;
-}
-
-.ruta .boton {
-    margin-top: auto;
-    align-self: flex-start;
-}
-
-.ruta img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: contain;
-    background-color: var(--crema);
-    
-}
-
 
 /* media queries */
 
@@ -474,6 +392,8 @@ button.boton {
     }
 
     /* Encabezado: recupera nombre a un extremo y menú al otro */
+   /* Usado por index.html reservas.html y tarifas.html */
+
     .barra-superior {
         flex-direction: row;
         justify-content: space-between;
@@ -485,22 +405,16 @@ button.boton {
     }
 
     /* Portada */
-    .portada,
-    .portada-principal {
+    .portada {
         min-height: 70vh;
     }
 
-    .portada-principal {
-        grid-template-columns: repeat(2, 1fr);
-    }
+   
 
-    /* Galería de rutas */
-    .lista-rutas {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    
 
     /* Reservas */
-  
+    /* Usado por reservas.html */
 
     .formulario-reserva-datos {
         flex-direction: row;
@@ -514,12 +428,16 @@ button.boton {
     }
 
     /* Pie */
+    /* Usado por index.html reservas.html y tarifas.html */
+
     .pie-pagina {
         flex-direction: row;
         justify-content: space-evenly;
     }
 
     /* Tablas */
+    /* Usado por tarifas.html */
+
     table {
         font-size: 1rem;
     }
@@ -537,18 +455,12 @@ button.boton {
         font-size: 2.5rem;
     }
 
-    .lista-rutas {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
     .formulario-reserva {
         grid-template-columns: 2fr 1fr;
     }
 
-
-    .portada-principal {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    
 }
 
 

@@ -1,4 +1,4 @@
-# Bitácora
+﻿# Bitácora
 
 ## Solicitud HTTP
 
@@ -340,5 +340,48 @@ Se verificó que las tres páginas probadas tienen `scrollWidth === clientWidth`
 - 360 px: una columna en galerías y formulario, menú y pie apilados.
 - 768 px: encabezado horizontal, dos columnas en las galerías y pie distribuido en fila.
 - 1280 px: contenido centrado con ancho máximo, tres columnas en rutas, tres columnas en la flota y formulario principal dividido en dos áreas.
+
+
+-------------------------------
+
+## Flota con bootstrap
+
+
+### Registro comparativo: CSS propio frente a Bootstrap
+
+| Tiempo                  | Líneas    |
+|-------------------------|-----------|
+| CSS propio: 120 minutos | 34 líneas |
+| Bootstrap: 20 minutos   | 8 líneas  |
+
+**NOTA**: Se cuentan 8 líneas aproximadamente por articulo en las cuales se pueden añadir diferentes clases (diseños)   
+
+#### Qué dio Bootstrap sin esfuerzo
+
+- Creó desde el principio una cuadrícula adaptable con columnas y `g-4`, sin escribir las reglas manuales de `grid-template-columns`, `gap` ni los cálculos de ajuste automático.
+- Facilitó los breakpoints con `col-md-6`, `col-lg-4` y `col-xl-3`, permitiendo mostrar 1, 2, 3 y 4 columnas según el ancho.
+- Entregó utilidades listas para usar en espacio, alineación, flexbox, bordes, redondeado, fondo, altura completa, proporción de imágenes y botones.
+- Permitió crear tarjetas uniformes con `h-100`, `d-flex`, `flex-column` y mantener los botones al final de cada tarjeta con `mt-auto`.
+- Redujo la cantidad de reglas CSS propias necesarias para la distribución y presentación básica de la flota.
+- Mejoró la velocidad de desarrollo: gran parte del diseño se describe directamente en las clases del HTML.
+
+#### Qué control se perdió
+
+- Se perdió parte del control directo sobre las reglas de distribución y los números exactos de cada grid, porque Bootstrap decide cómo se calculan las columnas y sus espacios.
+- Se perdió independencia visual respecto al sistema predeterminado de Bootstrap: colores, bordes, tipografía, botones y espaciados dependen de las variables y componentes del framework.
+- Se necesita conocer la convención de nombres y la combinación exacta de clases de Bootstrap; una clase adicional, mal escrita o no cargada puede cambiar o eliminar la apariencia esperada.
+- La lectura del HTML resulta más larga y puede volverse menos semántica, porque varias responsabilidades visuales quedan repetidas dentro de los atributos `class`.
+- La personalización más profunda requiere sobrescribir estilos de Bootstrap o ajustar variables, lo que puede generar conflictos con reglas generales y mayor especificidad.
+
+-------------------------------
+
+## Clases utilizadas de bootstrap
+
+- **`pt-3`**: aplica padding superior de tamaño 3. Pertenece a las utilidades de espaciado Bootstrap; su estructura combina padding (`p`) con el lado superior (`t`) y el tamaño (`3`). Se usa en los títulos de la sección de beneficios.
+- **`text-center`**: centra el texto horizontalmente. Es una utilidad de alineación de texto de Bootstrap y se aplica, por ejemplo, a los títulos, párrafos y beneficios.
+- **`fw-semibold`**: establece un grosor de fuente semibold. Pertenece a las utilidades `fw-*` de Bootstrap para modificar el peso tipográfico sin escribir una propiedad CSS manual.
+- **`text-start`**: alinea el texto al inicio de su contenedor según la dirección de lectura. En este documento también es una utilidad responsive disponible desde cualquier tamaño de pantalla.
+- **`d-none` / `d-md-block`**: `d-none` oculta un elemento y `d-md-block` lo muestra como bloque desde el breakpoint `md`. En la sección final, la combinación mantiene oculta la imagen decorativa en móvil y la muestra en pantallas medianas o mayores.
+
 
 
