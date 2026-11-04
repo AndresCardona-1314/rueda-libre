@@ -23,19 +23,25 @@
 <body>
     <header class="portada">
         
-        <section class="barra-superior">
-            <p class="marca"><a href="../index.html">Rueda Libre</a></p>
+        <nav class="navbar navbar-expand-lg " aria-label="Navegación principal">
+            <div class="container-fluid">
+                <a class="navbar-brand marca" href="../index.html">Rueda Libre</a>
 
-             <nav id="menu">
-            
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="tarifas.html">Tarifas y rutas</a></li>
-                    <li><a class="activo" href="reservas.html">Reservar ahora</a></li>
-                </ul>
-            </nav>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        </section>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tarifas.html">Tarifas y rutas</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="reservas.html">Reservar ahora</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
         
         
         
@@ -134,7 +140,7 @@
                             <textarea id="comentarios" name="comentarios" maxlength="300"></textarea>
                         </p>
                     </fieldset>
-                    <p><button class="boton" type="submit">Enviar</button></p>
+                    <button class="btn btn-primary btn-lg" type="submit">Enviar</button>
 
 
 
@@ -206,7 +212,7 @@
 
     </footer>
 
-    <a class="whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="whatsapp btn btn-success rounded-pill" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 

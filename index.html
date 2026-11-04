@@ -26,19 +26,25 @@
 <body>
     <header class="portada">
       
-        <section class="barra-superior">
-            <p class="marca"><a href="index.html">Rueda Libre</a></p>
+        <nav class="navbar navbar-expand-lg "  aria-label="Navegación principal">
+            <div class="container-fluid">
+                <a class="navbar-brand marca" href="index.html">Rueda Libre</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
 
-            <nav id="menu">
-                
-                <ul>
-                    <li><a class="activo" href="index.html">Inicio</a></li>
-                    <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
-                    <li><a href="paginas/reservas.html">Reservar ahora</a></li>
-                </ul>
-            </nav>
-        </section>    
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="paginas/tarifas.html">Tarifas y rutas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="paginas/reservas.html">Reservar ahora</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>    
        
        
         <section class="container py-4">
@@ -46,7 +52,7 @@
                 <section class="col-12 col-md-6 text-center ">
                     <h1>Rueda Libre | Alquiler de bicicletas y recorridos guiados por Medellín</h1>
                     <p>Bienvenidos a este movimiento donde podras encontrar todo lo relacionado con el mundo de las bicicletas</p>
-                    <a class="boton" href="#encuentranos">Ir a encuéntranos</a>
+                    <a class="btn btn-outline-primary btn-lg" href="#encuentranos">Ir a encuéntranos</a>
                 </section>
 
                 <div class="col-12 col-md-6 ">
@@ -74,7 +80,7 @@
                         <h3>Alquiler de bicicletas</h3>
                         <img src="img/Bicicletas.png" alt="Modelo de Bicicletas">
                         <p>Disponemos de una amplia <strong>variedad de bicicletas</strong> para alquiler, desde modelos para <strong>principiantes</strong> hasta bicicletas de alta gama para <strong>ciclistas experimentados</strong>. Todas nuestras bicicletas se encuentran en perfectas condiciones y vienen con <strong>casco</strong> y <strong>mecanismo para asegurarla</strong> incluido.</p>
-                        <a class="boton" href="paginas/tarifas.html#TarifasAlquiler">Ir a tarifas de alquiler</a>
+                        <a class="btn btn-outline-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasAlquiler">Ir a tarifas de alquiler</a>
                     </article>    
                 </li>
                 <li>
@@ -82,7 +88,7 @@
                         <h3>Recorridos guiados por Medellín</h3>
                         <img src="img/Recorridos_Guiados.png" alt="Recorridos Guiados">
                         <p>Descubre los mejores lugares de la ciudad con nuestros recorridos guiados por <strong>expertos en ciclismo</strong>.</p>
-                        <a class="boton" href="paginas/tarifas.html#TarifasRecorridos">Ir a tarifas de recorridos</a>
+                        <a class="btn btn-outline-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ir a tarifas de recorridos</a>
                     </article>    
                 </li>
                 <li>
@@ -167,7 +173,7 @@
                         </div>
                         <p>Cómoda y liviana para las ciclorrutas</p>
                         <p><strong>Precio: $10.000 por hora</strong></p>
-                        <a class="boton mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
                     </article>
                 </li>
 
@@ -179,7 +185,7 @@
                         </div>
                         <p>Se dobla en segundos; ideal para combinar con el metro.</p>
                         <p><strong>Precio: $12.000 por hora</strong></p>
-                        <a class="boton mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
                     </article>
                 </li>
 
@@ -191,7 +197,7 @@
                         </div>
                         <p> Suspensión delantera y 21 cambios para las subidas.</p>
                         <p><strong>Precio: $15.000 por hora</strong></p>
-                        <a class="boton mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
                     </article>
                 </li>
 
@@ -203,7 +209,7 @@
                         </div>
                         <p>Para rutas mixtas de asfalto y destapado.</p>
                         <p><strong>Precio: $18.000 por hora</strong></p>
-                        <a class="boton mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        <a class="btn btn-primary  mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
                     </article>
                 </li>
 
@@ -215,7 +221,7 @@
                         </div>
                         <p>Asistencia eléctrica con 45 km de autonomía.</p>
                         <p><strong>Precio: $25.000 por hora</strong></p>
-                        <a class="boton mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        <a class="btn btn-primary  mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
                     </article>
                 </li>
 
@@ -227,7 +233,7 @@
                         </div>
                         <p>	Para niños de 6 a 10 años.</p>
                         <p><strong>Precio: $8.000 por hora</strong></p>
-                        <a class="boton mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
                     </article>
                 </li>
 
@@ -240,7 +246,7 @@
                         </div>
                         <p>Para dos personas; perfecta para pasear en pareja</p>
                         <p><strong>Precio: $20.000 por hora</strong></p>
-                        <a class="boton mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
                     </article>
                 </li>
 
@@ -260,7 +266,7 @@
                         <h3>Río y Parques</h3>                       
                         <p>Recorre los ríos y parques de Medellín mientras disfrutas de la naturaleza de la ciudad.</p>
                         <p><strong>Nivel: Fácil</strong></p>
-                        <a class="boton mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
                     </article>
                 </li>
 
@@ -272,7 +278,7 @@
                         <h3>Sabores de barrio</h3>                        
                         <p>Descubre la historia y cultura de los barrios Medellín mientras saboreas su gastronomía.</p>
                         <p><strong>Nivel: Medio</strong></p>
-                        <a class="boton mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
                     </article>
                 </li>
 
@@ -284,7 +290,7 @@
                         <h3>Reto Las Palmas</h3>                       
                         <p>Aventúrate en los senderos de montaña y disfruta de vistas panorámicas de la ciudad.</p>
                         <p><strong>Nivel: Difícil</strong></p>
-                        <a class="boton mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
+                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
                     </article>
                 </li>
 
@@ -337,7 +343,7 @@
     </footer>
 
 
-    <a class="whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="whatsapp btn btn-success rounded-pill" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 

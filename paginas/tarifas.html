@@ -24,19 +24,25 @@
 <body>
     <header class="portada">
 
-        <section class="barra-superior">
+        <nav class="navbar navbar-expand-lg " aria-label="Navegación principal">
+            <div class="container-fluid">
+                <a class="navbar-brand marca" href="../index.html">Rueda Libre</a>
 
-            <p class="marca"><a href="../index.html">Rueda Libre</a></p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Mostrar menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <nav id="menu">
-            
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a class="activo" href="tarifas.html">Tarifas y rutas</a></li>
-                    <li><a href="reservas.html">Reservar ahora</a></li>
-                </ul>
-            </nav>
-        </section>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link"  href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="tarifas.html">Tarifas y rutas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservas.html">Reservar ahora</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>   
 
         
 
@@ -123,7 +129,7 @@
 
                 
                 
-                <a class="boton mt-4" href="../paginas/reservas.html">Reservar ahora</a>
+                <a class="btn btn-primary btn-lg mt-4" href="reservas.html">Reservar ahora</a>
 
 
             </aside>
@@ -164,7 +170,7 @@
         </section>
     </footer>
 
-    <a class="whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a class="whatsapp btn btn-success rounded-pill" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
