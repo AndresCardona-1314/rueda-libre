@@ -393,39 +393,14 @@ Se verificó que las tres páginas probadas tienen `scrollWidth === clientWidth`
 
 **NOTA**: Los demás conflictos son con respecto a configuraciones preestablecidas del bootstrap, por ejemplo, en los títulos. Sin embargo, acá no se modifica nada ya que por la cascada se terminan aplicando los definidos en el css.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+------------------------------------
 
 ## Comparativa v1.5 frente a Bootstrap
 
-| Versión | Líneas de css/styles.css | Tiempo invertido |
-|---|---:|---:|
-| v1.5 — CSS propio (`4cc49cc`) | 545 | ___ minutos |
-| Versión actual — Bootstrap + CSS propio | 466 | ___ minutos |
+| Versión                                 | Líneas de css/styles.css | Tiempo invertido |
+|-----------------------------------------|--------------------------|------------------|
+| v1.5 — CSS propio (`4cc49cc`)           | 545                      | ___ minutos      |
+| Versión actual — Bootstrap + CSS propio | 437                      | ___ minutos      |
 
 ## Ventajas de la v1.5 con CSS propio
 

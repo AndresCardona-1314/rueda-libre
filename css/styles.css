@@ -230,6 +230,11 @@ th {
     color: var(--azul-noche);
 }
 
+caption {
+    caption-side: top;
+    color: var(--azul-noche);
+}
+
 
 /* Formulario */
 /* Usado por reservas.html */
@@ -300,19 +305,6 @@ button.boton {
     border: none;
     font-size: 1rem;
     cursor: pointer;
-}
-
-.formulario-reserva {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--espaciado-grande);
-}
-
-.formulario-reserva-datos {
-    display: flex;
-   flex-direction: column;
-  
-    gap: var(--espaciado-pequeno);
 }
 
 
@@ -409,23 +401,7 @@ button.boton {
         min-height: 70vh;
     }
 
-   
 
-    
-
-    /* Reservas */
-    /* Usado por reservas.html */
-
-    .formulario-reserva-datos {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .formulario-reserva-datos > * {
-        flex: 1 1 10rem;
-        min-width: 10rem;
-    }
 
     /* Pie */
     /* Usado por index.html reservas.html y tarifas.html */
@@ -453,11 +429,6 @@ button.boton {
 
     h1 {
         font-size: 2.5rem;
-    }
-
-
-    .formulario-reserva {
-        grid-template-columns: 2fr 1fr;
     }
 
     

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Reserva tu bicicleta">
     <title>Rueda Libre | Reserva tu bicicleta </title> 
-     <link rel="icon" href="img/Logo_Rueda_Libre.png">
+     <link rel="icon" href="../img/Logo_Rueda_Libre.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,11 +48,11 @@
        
     </header>
 
-    <main>
+    <main class="container py-4">
         
 
-        <section class="formulario-reserva">
-            <section>
+        <section class="row g-4">
+            <section class="col-12 col-md-8">
                 <h2>Realiza tu reserva aquí:</h2>
                 <form action="#" method="post">
                     <fieldset>
@@ -61,12 +61,12 @@
                             <label for="nombre">Nombre completo</label>
                             <input type="text" id="nombre" name="nombre" required minlength="3">
                         </p>
-                        <section class="formulario-reserva-datos">
-                            <p>
+                        <section class="row g-3">
+                            <p class="col-12 col-md-6">
                                 <label for="identificacion">Número de identificación</label>
                                 <input type="text" id="identificacion" name="identificacion" required pattern="[0-9]{6,10}" title="Ingresa entre 6 y 10 dígitos númericos, sin letras ni espacios" minlength="6" maxlength="10" inputmode="numeric" placeholder="Ej. 123456789">
                             </p>
-                            <p>
+                            <p class="col-12 col-md-6">
                                 <label for="celular">Número de celular</label>
                                 <input type="tel" id="celular" name="celular" required pattern="3[0-9]{9}" maxlength="10" minlength="10" inputmode="numeric" title="Ingresa un celular de 10 dígitos que comience por 3. Ejemplo: 3001234567" placeholder="Ej. 3001234567">
                             </p>
@@ -142,7 +142,7 @@
                 </form>
             </section>
 
-            <section>
+            <section class="col-12 col-md-4">
                 <aside>
                     <h2>Información de contacto:</h2>
                     <p>¿Tienes preguntas? Contáctanos:</p>
