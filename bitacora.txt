@@ -440,3 +440,25 @@ La versión actual conserva la identidad visual del proyecto y delega a Bootstra
 la distribución responsiva. Bootstrap reduce las líneas necesarias para organizar
 contenedores y columnas, mientras que `styles.css` debe conservar únicamente
 colores, tipografía, botones, tablas, tarjetas, formularios y estados visuales.
+
+
+------------------------------
+
+# Bootstrap Semana 2
+
+## Cierre de la semana: Bootstrap personalizado (v2.0)
+
+**Qué construí:** grilla (`container > row > col`) en las tres páginas, navbar colapsable, cards, carrusel, formulario con validación visual, alerta, modal, íconos, y personalización con variables de marca.
+
+**Personalización:** variables globales (`--bs-primary`, enlaces, fuente, radio), botón principal, variante `.btn-naranja`, clases propias `.portada`, y `.pie-pagina`.
+
+**Lo más difícil (problemas reales):**
+1. (por ejemplo: columnas sin `.row`)
+2. (por ejemplo: `<div>` dentro de `<p>` y los mensajes que no aparecían)
+3. (por ejemplo: especificidad contra las reglas de Bootstrap y el foco)
+
+**Capturas:** `img/capturas/captura_sin_styles.css.png` y `img/capturas/captura_con_estyles.css.png`.
+
+
+
+

@@ -29,6 +29,11 @@
     --bs-secondary-rgb: 91, 100, 112;
     --bs-link-color-rgb: 10, 88, 202;
     --bs-link-hover-color-rgb: 20, 33, 61;
+
+    --bs-body-font-family: var(--textos);
+
+    --bs-border-radius: var(--espaciado-pequeno);
+
     
 }
 
@@ -94,7 +99,20 @@
     --bs-btn-active-border-color: var(--azul-noche);
 }
 
-
+.btn-naranja {
+    --bs-btn-color: var(--azul-noche);
+    --bs-btn-bg: var(--naranja-pedal);
+    --bs-btn-border-color: var(--naranja-pedal);
+    --bs-btn-hover-color: #FFFFFF;
+    --bs-btn-hover-bg: var(--verde-ruta);
+    --bs-btn-hover-border-color: var(--verde-ruta);
+    --bs-btn-active-color: #FFFFFF;
+    --bs-btn-active-bg: var(--azul-noche);
+    --bs-btn-active-border-color: var(--azul-noche);
+    --bs-btn-disabled-color: var(--azul-noche);
+    --bs-btn-disabled-bg: var(--naranja-pedal);
+    --bs-btn-disabled-border-color: var(--naranja-pedal);
+}
 
 
 
@@ -160,7 +178,9 @@ main {
 .portada {
     min-height: 50vh;
     text-align: center;
+   
 }
+
 
 /* Usado por index.html reservas.html y tarifas.html */
 
@@ -239,6 +259,20 @@ caption {
     --bs-danger-rgb: 176, 42, 55;
     --bs-form-invalid-color: rgb(var(--bs-danger-rgb));
     --bs-form-invalid-border-color: rgb(var(--bs-danger-rgb));
+}
+
+/* Recuadro de las casillas con la paleta */
+.form-check-input {
+    border: 2px solid var(--azul-noche);
+}
+
+
+/* Casillas: la validación solo afecta al recuadro */
+.was-validated .form-check-input:invalid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label,
+.form-check-input.is-invalid ~ .form-check-label,
+.form-check-input.is-valid ~ .form-check-label {
+    color: inherit;
 }
 
 
