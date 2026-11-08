@@ -7,6 +7,7 @@
     --naranja-pedal: #F39A2B;
     --azul-noche: #14213D;
     --gris-asfalto: #5B6470;
+    
 
     --titulos: 'Montserrat', Arial;
     --textos: "Open Sans", Arial;
@@ -20,20 +21,19 @@
 
 /* Puente con Bootstrap */
 :root {
-    --bs-primary-rgb: 20, 33, 61;
+    --bs-body-bg: var(--crema);
+    --bs-body-color: var(--azul-noche);
+    --bs-primary-rgb: var(--crema);
     --bs-success-rgb: 30, 122, 79;
     --bs-warning-rgb: 243, 154, 43;
     --bs-secondary-rgb: 91, 100, 112;
     --bs-link-color-rgb: 10, 88, 202;
     --bs-link-hover-color-rgb: 20, 33, 61;
+    
 }
 
 /* Navbar con la paleta */
-.navbar[data-bs-theme="dark"] {
-    --bs-navbar-color: #FFFFFF;
-    --bs-navbar-hover-color: #FFFFFF;
-    --bs-navbar-active-color: var(--azul-noche);
-}
+
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
@@ -142,14 +142,8 @@ h6 {
     font-size: 1.5rem;
 }
 
-/* foco de los campos */
 
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 3px solid var(--azul-noche);
-    outline-offset: 1px;
-}
+
 
 
 /* Espaciado */
@@ -181,50 +175,15 @@ main {
 /* Sección de servicios */
 /* usado por index.html */
 
-.lista-servicios {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espaciado-grande);
-}
 
-.lista-servicios li {
-    flex: 1 1 0;
-    min-width: 15rem;
-    display: flex;
+
+.card {
+    --bs-card-border-width: 2px;
+    --bs-card-border-color: var(--gris-asfalto);
+    --bs-card-border-radius: 12px;
 }
 
 
-.tarjeta {
-    position:relative;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: var(--espaciado-mediano);
-    border: 2px solid var(--gris-asfalto);
-    border-radius: 12px;
-    
-}
-
-.tarjeta img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    display: block;
-}
-
-
-.etiqueta {
-    position: absolute;
-    top: var(--espaciado-pequeno);
-    right: var(--espaciado-pequeno);
-    padding: var(--espaciado-muypequeno) var(--espaciado-muypequeno);
-    background-color: var(--naranja-pedal);
-    color: var(--azul-noche);
-    font-weight: 600;
-    border-radius: 8px;
-}
 
 
 /* Tablas tarifas*/
@@ -258,6 +217,33 @@ caption {
 /* Formulario */
 /* Usado por reservas.html */
 
+/* Campos: identidad sobre las clases de Bootstrap */
+.form-control,
+.form-select {
+    border: 2px solid var(--gris-asfalto);
+    border-radius: 8px;
+}
+
+/* Foco visible, con la paleta */
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: var(--azul-noche);
+    outline: 3px solid var(--azul-noche);
+    outline-offset: 1px;
+    box-shadow: none;
+}
+
+/* Colores de la paleta para alerta y errores */
+:root {
+    --bs-danger-rgb: 176, 42, 55;
+    --bs-form-invalid-color: rgb(var(--bs-danger-rgb));
+    --bs-form-invalid-border-color: rgb(var(--bs-danger-rgb));
+}
+
+
+
+
 fieldset {
     min-width: 0;
     margin-bottom: var(--espaciado-grande);
@@ -275,9 +261,6 @@ legend {
     font-weight: 700;
 }
 
-fieldset p {
-    margin: 0 0 var(--espaciado-grande);
-}
 
 label {
     display: block;
@@ -285,19 +268,6 @@ label {
     font-weight: 600;
 }
 
-input:not([type="checkbox"]),
-select,
-textarea {
-    width: 100%;
-    max-width: 100%;
-    padding: var(--espaciado-mediano);
-    border: 2px solid var(--gris-asfalto);
-    border-radius: 8px;
-    font-family: var(--textos);
-    font-size: 1rem;
-    background-color: var(--crema);
-    color: var(--azul-noche);
-}
 
 input[type="date"] {
     -webkit-appearance: none;
@@ -312,18 +282,6 @@ textarea {
     resize: vertical;
 }
 
-.casilla {
-    display: flex;
-    align-items: center;
-    gap: var(--espaciado-mediano);
-}
-
-.casilla label {
-    margin-bottom: 0;
-}
-
-
-
 
 
 /* whatsapp*/
@@ -337,7 +295,27 @@ textarea {
     
 }
 
+/* Carrusel: foco visible en los controles */
+.carousel-control-prev:focus-visible,
+.carousel-control-next:focus-visible {
+    outline: 3px solid #FFFFFF;
+    outline-offset: -3px;
+    box-shadow: inset 0 0 0 6px var(--azul-noche);
+}
 
+/* Carrusel: flechas Azul Noche */
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2314213D'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2314213D'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
 
 
 /* encabezado página */

@@ -26,7 +26,7 @@
 <body>
     <header class="portada">
       
-        <nav class="navbar navbar-expand-lg "  aria-label="Navegación principal">
+        <nav class="navbar navbar-expand-lg bg-primary "  aria-label="Navegación principal">
             <div class="container-fluid">
                 <a class="navbar-brand marca" href="index.html">Rueda Libre</a>
 
@@ -65,6 +65,46 @@
     </header>
 
     <main>
+        <section class="container py-4" aria-labelledby="titulo-promociones">
+            <h1 id="titulo-promociones" class="text-center mb-4">Promociones</h1>
+
+            <div id="carruselPromos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" aria-label="Promociones de Rueda Libre">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="ratio ratio-21x9">
+                            <img src="img/promocion1.png" class="object-fit-contain" alt="Promoción 1: Martes 2x1 en bicicletas urbanas">
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="ratio ratio-21x9">
+                            <img src="img/promocion2.png" class="object-fit-contain" alt="Promoción 2: 20 % de descuento en eléctricas de lunes a jueves">
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="ratio ratio-21x9">
+                            <img src="img/promocion3.png" class="object-fit-contain" alt="Promoción 3: Si cumples años, el recorrido guiado es gratis">
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselPromos" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselPromos" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+
+            </div>
+        </section>
+
         <section>
             <h2>¿Quiénes somos?</h2>
             <p>Somos un equipo apasionado por el mundo de las <strong>bicicletas</strong>, dedicado a ofrecer <strong>experiencias únicas</strong> de ciclismo por la ciudad de <em>Medellín</em>.</p>
@@ -73,29 +113,47 @@
         <section>
             <h2>Nuestros Servicios</h2>
             <p>Ofrecemos una variedad de servicios relacionados con el ciclismo.</p>
-            <ol class="lista-servicios">
-                <li>
-                    <article class="tarjeta">
-                        <span class="etiqueta">Nuevo</span>
-                        <h3>Alquiler de bicicletas</h3>
-                        <img src="img/Bicicletas.png" alt="Modelo de Bicicletas">
-                        <p>Disponemos de una amplia <strong>variedad de bicicletas</strong> para alquiler, desde modelos para <strong>principiantes</strong> hasta bicicletas de alta gama para <strong>ciclistas experimentados</strong>. Todas nuestras bicicletas se encuentran en perfectas condiciones y vienen con <strong>casco</strong> y <strong>mecanismo para asegurarla</strong> incluido.</p>
-                        <a class="btn btn-outline-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasAlquiler">Ir a tarifas de alquiler</a>
+            <ol class="row g-4 list-unstyled">
+                <li class="col-12 col-md-6 col-xl-4">
+                    <article class="card h-100">
+                        <span class="badge bg-warning text-primary position-absolute top-0 end-0 m-2 z-1">Nuevo</span>
+                        <div class="ratio ratio-4x3">
+                            <img src="img/Bicicletas.png" class="card-img-top object-fit-contain" alt="Modelo de Bicicletas">
+                        </div>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Alquiler de bicicletas</h3>
+                        
+                            <p class="card-text">Disponemos de una amplia <strong>variedad de bicicletas</strong> para alquiler, desde modelos para <strong>principiantes</strong> hasta bicicletas de alta gama para <strong>ciclistas experimentados</strong>. Todas nuestras bicicletas se encuentran en perfectas condiciones y vienen con <strong>casco</strong> y <strong>mecanismo para asegurarla</strong> incluido.</p>
+                            <a class="btn btn-outline-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasAlquiler">Ir a tarifas de alquiler</a>
+                        </div>    
                     </article>    
                 </li>
-                <li>
-                    <article class="tarjeta">
-                        <h3>Recorridos guiados por Medellín</h3>
-                        <img src="img/Recorridos_Guiados.png" alt="Recorridos Guiados">
-                        <p>Descubre los mejores lugares de la ciudad con nuestros recorridos guiados por <strong>expertos en ciclismo</strong>.</p>
-                        <a class="btn btn-outline-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ir a tarifas de recorridos</a>
+                <li class="col-12 col-md-6 col-xl-4">
+                    <article class="card h-100">
+                        <div class="ratio ratio-4x3">
+                            <img src="img/Recorridos_Guiados.png" class="card-img-top object-fit-contain" alt="Recorridos Guiados">
+                        </div>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Recorridos guiados por Medellín</h3>
+                        
+                            <p class="card-text">Descubre los mejores lugares de la ciudad con nuestros recorridos guiados por <strong>expertos en ciclismo</strong>.</p>
+                            <a class="btn btn-outline-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ir a tarifas de recorridos</a>
+                        </div>    
                     </article>    
                 </li>
-                <li>
-                    <article class="tarjeta">
-                        <h3>Taller de reparación y mantenimiento</h3>
-                        <img src="img/Mantenimiento.png" alt="Taller de reparación y mantenimiento">
-                        <p>Nuestro taller ofrece servicios profesionales de reparación y mantenimiento para mantener tu bicicleta en <strong>perfecto estado</strong>.</p>
+                <li class="col-12 col-md-6 col-xl-4">
+                    <article class="card h-100">
+                        <div class="ratio ratio-4x3">
+                            <img src="img/Mantenimiento.png" class="card-img-top object-fit-contain" alt="Taller de reparación y mantenimiento">
+                        </div>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Taller de reparación y mantenimiento</h3>
+                        
+                            <p class="card-text">Nuestro taller ofrece servicios profesionales de reparación y mantenimiento para mantener tu bicicleta en <strong>perfecto estado</strong>.</p>
+                        </div>    
                     </article>      
                 </li>
                 
@@ -119,43 +177,50 @@
             <h2 class="mb-4 text-start">Beneficios</h2>
             <ul class="row g-4 list-unstyled">
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 p-4 d-flex flex-column border rounded">
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/bicicleta-prueba.png" class="object-fit-contain" alt="Bicicleta">
+                            <img src="img/bicicleta-prueba.png" class="card-img-top object-fit-contain" alt="Bicicleta">
                         </div>
-                        
-                        <h3 class="mb-2 text-center ">Bicicletas revisadas en cada alquiler</h3>
-                        <p class="text-center">Revisamos cada bicicleta antes de entregártela para que salgas a rodar con tranquilidad.</p>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5 ">Bicicletas revisadas en cada alquiler</h3>
+                            <p class="card-text">Revisamos cada bicicleta antes de entregártela para que salgas a rodar con tranquilidad.</p>
+                        </div>    
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/casco-candado.png" class="object-fit-contain" alt="casco y candado">
+                            <img src="img/casco-candado.png" class="card-img-top object-fit-contain" alt="casco y candado">
                         </div>
-                        <h3 class="mb-2 text-center ">Casco y candado incluidos</h3>
-                        <p class="text-center">Todos nuestros alquileres incluyen casco y candado para tu seguridad.</p>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5 ">Casco y candado incluidos</h3>
+                            <p class="card-text">Todos nuestros alquileres incluyen casco y candado para tu seguridad.</p>
+                        </div>
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/guia.png" class="object-fit-contain" alt="Guía">
+                            <img src="img/guia.png" class="card-img-top object-fit-contain" alt="Guía">
+                        </div>
+                        <div class="card-body d-flex flex-column">    
+                            <h3 class="card-title h5">Guías certificados</h3>
+                            <p class="card-text">Nuestros guías están certificados y tienen amplia experiencia en la zona.</p>
                         </div>    
-                        <h3 class="mb-2 text-center ">Guías certificados</h3>
-                        <p class="text-center">Nuestros guías están certificados y tienen amplia experiencia en la zona.</p>
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/puntos-devolucion.png" class="object-fit-contain" alt="Puntos de devolución">
+                            <img src="img/puntos-devolucion.png" class="card-img-top object-fit-contain" alt="Puntos de devolución">
+                        </div>
+                        <div class="card-body d-flex flex-column">    
+                            <h3 class="card-title h5">Puntos de devolución en tres sedes</h3>
+                            <p class="card-text">Puedes devolver tu bicicleta en cualquiera de nuestras tres sedes convenientemente ubicadas.</p>
                         </div>    
-                        <h3 class="mb-2 text-center ">Puntos de devolución en tres sedes</h3>
-                        <p class="text-center">Puedes devolver tu bicicleta en cualquiera de nuestras tres sedes convenientemente ubicadas.</p>
                     </article>
                 </li>
             </ul>
@@ -166,87 +231,113 @@
             <p>Contamos con diferentes modelos de bicicletas a tu disposición: </p>
             <ul class="row g-4 list-unstyled">
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
-                        <h3>Urbana Clásica</h3>
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/bicicleta-clasica.png" alt="Bicicleta urbana clásica" class=" object-fit-contain">
+                            <img src="img/bicicleta-clasica.png" alt="Bicicleta urbana clásica" class="card-img-top object-fit-contain">
                         </div>
-                        <p>Cómoda y liviana para las ciclorrutas</p>
-                        <p><strong>Precio: $10.000 por hora</strong></p>
-                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Urbana Clásica</h3>
+                            
+                            <p class="card-text">Cómoda y liviana para las ciclorrutas</p>
+                            <p class="card-text"><strong>Precio: $10.000 por hora</strong></p>
+                            <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        </div>    
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
-                        <h3>Urbana Plegable</h3>
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/biciqueta-urbana-plegable.png" alt="Bicicleta urbana plegable" class="object-fit-contain">
+                            <img src="img/biciqueta-urbana-plegable.png" alt="Bicicleta urbana plegable" class="card-img-top object-fit-contain">
                         </div>
-                        <p>Se dobla en segundos; ideal para combinar con el metro.</p>
-                        <p><strong>Precio: $12.000 por hora</strong></p>
-                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Urbana Plegable</h3>
+                        
+                            <p class="card-text">Se dobla en segundos; ideal para combinar con el metro.</p>
+                            <p class="card-text"><strong>Precio: $12.000 por hora</strong></p>
+                            <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        </div>
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
-                        <h3>Montaña Trail</h3>
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/bicicleta-montail-trail.png" alt="Bicicleta montaña trail" class="object-fit-contain">
+                            <img src="img/bicicleta-montail-trail.png" alt="Bicicleta montaña trail" class="card-img-top object-fit-contain">
                         </div>
-                        <p> Suspensión delantera y 21 cambios para las subidas.</p>
-                        <p><strong>Precio: $15.000 por hora</strong></p>
-                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Montaña Trail</h3>
+                        
+                            <p class="card-text"> Suspensión delantera y 21 cambios para las subidas.</p>
+                            <p class="card-text"><strong>Precio: $15.000 por hora</strong></p>
+                            <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        </div>
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
-                        <h3>Gravel Aventura</h3>
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/bicicleta-gravel-aventura.png" alt="Bicicleta gravel aventura" class="object-fit-contain">
+                            <img src="img/bicicleta-gravel-aventura.png" alt="Bicicleta gravel aventura" class="card-img-top object-fit-contain">
                         </div>
-                        <p>Para rutas mixtas de asfalto y destapado.</p>
-                        <p><strong>Precio: $18.000 por hora</strong></p>
-                        <a class="btn btn-primary  mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Gravel Aventura</h3>
+                        
+                            <p class="card-text">Para rutas mixtas de asfalto y destapado.</p>
+                            <p class="card-text"><strong>Precio: $18.000 por hora</strong></p>
+                            <a class="btn btn-primary  mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        </div>
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
-                        <h3>Eléctrica Urbana</h3>
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/bicicleta-electrica-urbana.png" alt="Bicicleta eléctrica urbana" class="object-fit-contain">
+                            <img src="img/bicicleta-electrica-urbana.png" alt="Bicicleta eléctrica urbana" class="card-img-top object-fit-contain">
                         </div>
-                        <p>Asistencia eléctrica con 45 km de autonomía.</p>
-                        <p><strong>Precio: $25.000 por hora</strong></p>
-                        <a class="btn btn-primary  mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Eléctrica Urbana</h3>
+                        
+                            <p class="card-text">Asistencia eléctrica con 45 km de autonomía.</p>
+                            <p class="card-text"><strong>Precio: $25.000 por hora</strong></p>
+                            <a class="btn btn-primary  mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        </div>
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
-                        <h3>Infantil</h3>
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/bicicleta-infantil.png" alt="Bicicleta infantil" class="object-fit-contain">
+                            <img src="img/bicicleta-infantil.png" alt="Bicicleta infantil" class="card-img-top object-fit-contain">
                         </div>
-                        <p>	Para niños de 6 a 10 años.</p>
-                        <p><strong>Precio: $8.000 por hora</strong></p>
-                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Infantil</h3>
+                        
+                            <p class="card-text">	Para niños de 6 a 10 años.</p>
+                            <p class="card-text"><strong>Precio: $8.000 por hora</strong></p>
+                            <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        </div>
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-lg-4 col-xl-3">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
-
-                        <h3>Tándem</h3>
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 my-3">
-                            <img src="img/bicicleta-tandem.png" alt="Bicicleta tándem" class="object-fit-contain">
+                            <img src="img/bicicleta-tandem.png" alt="Bicicleta tándem" class="card-img-top object-fit-contain">
                         </div>
-                        <p>Para dos personas; perfecta para pasear en pareja</p>
-                        <p><strong>Precio: $20.000 por hora</strong></p>
-                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Tándem</h3>
+                        
+                            <p class="card-text">Para dos personas; perfecta para pasear en pareja</p>
+                            <p class="card-text"><strong>Precio: $20.000 por hora</strong></p>
+                            <a class="btn btn-primary mt-auto align-self-start" href="paginas/reservas.html">Reservar</a>
+                        </div>
                     </article>
                 </li>
 
@@ -259,38 +350,47 @@
             <p>Explora Medellín con nuestras rutas recomendadas para ciclistas:</p>
             <ul class="row g-4 list-unstyled">
                 <li class="col-12 col-md-6 col-xl-4">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 mb-3">
-                            <img src="img/ruta-rio-parques.png" alt="Ruta Río y Parques" class="object-fit-contain">
+                            <img src="img/ruta-rio-parques.png" alt="Ruta Río y Parques" class="card-img-top object-fit-contain">
                         </div>
-                        <h3>Río y Parques</h3>                       
-                        <p>Recorre los ríos y parques de Medellín mientras disfrutas de la naturaleza de la ciudad.</p>
-                        <p><strong>Nivel: Fácil</strong></p>
-                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
+                        
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Río y Parques</h3>                       
+                            <p class="card-text">Recorre los ríos y parques de Medellín mientras disfrutas de la naturaleza de la ciudad.</p>
+                            <p class="card-text"><strong>Nivel: Fácil</strong></p>
+                            <a class="btn btn-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
+                        </div>    
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-xl-4">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 mb-3">
-                            <img src="img/ruta-sabores-barrio.png" alt="Ruta Sabores de barrio" class="object-fit-contain">
+                            <img src="img/ruta-sabores-barrio.png" alt="Ruta Sabores de barrio" class="card-img-top object-fit-contain">
                         </div>
-                        <h3>Sabores de barrio</h3>                        
-                        <p>Descubre la historia y cultura de los barrios Medellín mientras saboreas su gastronomía.</p>
-                        <p><strong>Nivel: Medio</strong></p>
-                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Sabores de barrio</h3>                        
+                            <p class="card-text">Descubre la historia y cultura de los barrios Medellín mientras saboreas su gastronomía.</p>
+                            <p class="card-text"><strong>Nivel: Medio</strong></p>
+                            <a class="btn btn-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
+                        </div>    
                     </article>
                 </li>
 
                 <li class="col-12 col-md-6 col-xl-4">
-                    <article class="h-100 d-flex flex-column p-4 border rounded">
+                    <article class="card h-100">
                         <div class="ratio ratio-4x3 mb-3">
-                            <img src="img/ruta-reto-palmas.png" alt="Ruta Reto Las Palmas" class="object-fit-contain">
+                            <img src="img/ruta-reto-palmas.png" alt="Ruta Reto Las Palmas" class="card-img-top object-fit-contain">
                         </div>
-                        <h3>Reto Las Palmas</h3>                       
-                        <p>Aventúrate en los senderos de montaña y disfruta de vistas panorámicas de la ciudad.</p>
-                        <p><strong>Nivel: Difícil</strong></p>
-                        <a class="btn btn-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
+
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Reto Las Palmas</h3>                       
+                            <p class="card-text">Aventúrate en los senderos de montaña y disfruta de vistas panorámicas de la ciudad.</p>
+                            <p class="card-text"><strong>Nivel: Difícil</strong></p>
+                            <a class="btn btn-primary mt-auto align-self-start" href="paginas/tarifas.html#TarifasRecorridos">Ver tarifas</a>
+                        </div>    
                     </article>
                 </li>
 
