@@ -459,6 +459,20 @@ colores, tipografía, botones, tablas, tarjetas, formularios y estados visuales.
 
 **Capturas:** `img/capturas/captura_sin_styles.css.png` y `img/capturas/captura_con_estyles.css.png`.
 
+----------------------------
+
+# Diferencia en la generación de botones de Bootstrap y Tailwind
+
+<button class="btn btn-primary">Reservar ahora</button> con Bootstrap
+
+<button
+  class="rounded bg-amber-400 px-4 py-2 text-slate-900 hover:bg-amber-600">
+  Reservar ahora
+  </button> con Tailwind
+
+  La principal diferencia es que Bootstrap utiliza ya clases diseñadas y estructuradas previamente, mientras que Tailwind te da la opción de utilizar clases más sencillas y/o básicas de modo de que puedas ir personalizando todo como lo desees.
 
 
+------------------------------------
 
+cuando busque bg-slate-950 aparareció esa clase en el archivo, sin embargo, cuando busque bg-pink-500 no aparece en el archivo. Esto sucede porque Tailwind crea el css netamente con las clases que utiliza el html.
