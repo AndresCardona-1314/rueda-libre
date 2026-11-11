@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes | Nocturna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="./src/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-azul-noche font-open-sans text-crema">
+    <main class="mx-auto max-w-5xl px-6 py-16">
+
+        <a href="./index.html" class="inline-block rounded-lg text-naranja-pedal underline underline-offset-4 hover:text-amarillo-farol focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">← Volver al inicio</a>
+
+        <h1 class="mt-8 font-montserrat text-4xl font-bold text-crema">Kit de componentes</h1>
+        <p class="mt-2 text-crema">Botones, card, alertas y campos de Nocturna, con las mismas reglas de radios, espaciado y color.</p>
+
+        <!-- BOTONES -->
+        <section class="mt-16" aria-labelledby="titulo-botones">
+            <h2 id="titulo-botones" class="font-montserrat text-2xl font-bold text-crema">Botones</h2>
+            <p class="mt-2 text-crema">Principal, secundario y de contorno.</p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-4">
+                <button type="button" class="inline-flex items-center justify-center rounded-lg border-2 border-transparent bg-verde-ruta px-6 py-3 text-base font-semibold text-crema transition-colors hover:bg-verde-ruta/80 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Principal</button>
+
+                <button type="button" class="inline-flex items-center justify-center rounded-lg border-2 border-transparent bg-gris-asfalto px-6 py-3 text-base font-semibold text-crema transition-colors hover:bg-gris-asfalto/50 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Secundario</button>
+
+                <button type="button" class="inline-flex items-center justify-center rounded-lg border-2 border-naranja-pedal px-6 py-3 text-base font-semibold text-naranja-pedal transition-colors hover:bg-naranja-pedal hover:text-azul-noche focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Contorno</button>
+            </div>
+        </section>
+
+        <!-- CARD -->
+        <section id="rutas" class="mx-auto max-w-5xl px-6 py-16" aria-labelledby="rutas-nocturnas">
+            <h2 id="rutas-nocturnas" class="font-montserrat text-3xl font-bolt text-center text-crema">Rutas nocturnas</h2>
+            <p class="mt-2 text-center text-crema">Elige la ruta que mejor se adapte a ti.</p>
+
+            
+                <div class="mt-6 max-w-md">
+                    <article class="flex h-full flex-col overflow-hidden rounded-2xl border border-crema/50 bg-azul-noche transition duration-200 hover:border-naranja-pedal hover:shadow-xl hover:shadow-naranja-pedal/20 focus-within:border-naranja-pedal">
+                        <img src="img/luces_del_centro.png" alt="Ruta luces del centro" class="h-48 w-full object-contain">
+
+                        <div class="flex flex-1 flex-col p-6">
+                            <span class="inline-flex items-center self-start rounded-full bg-[color-mix(in_srgb,var(--color-verde-ruta),white_30%)] brightness-150 px-3 py-1 text-xs font-semibold text-[var(--color-azul-noche)]">Nivel fácil</span>
+                            <h3 class="mt-4 font-montserrat text-xl font-bold text-crema">Ruta luces del centro</h3>
+
+                            <dl class="mt-4 grid grid-cols-2 gap-4">
+                                <div>
+                                    <dt class="text-xs uppercase tracking-wide text-crema/50">Distancia</dt>
+                                    <dd class="mt-1 text-base font-semibold text-crema">10 km</dd>
+                                </div>
+
+                                
+                                <div>
+                                    <dt class="text-xs uppercase tracking-wide text-crema/50">Duración</dt>
+                                    <dd class="mt-1 text-base font-semibold text-crema">2 h</dd>
+                                </div>
+
+                                <div class="col-span-2">
+                                    <dt class="text-xs uppercase tracking-wide text-crema/50">Punto de encuentro</dt>
+                                    <dd class="mt-1 text-base font-semibold text-crema">Sede Rueda Libre</dd>
+                                </div>
+
+                            </dl>
+
+                            <div class="mt-auto pt-6">
+                                <p class="text-3xl font-bold text-crema">$55.000 <span class="text-sm font-normal text-crema/50">por persona</span></p>
+                                <button type="button" class="mt-4 inline-flex w-full items-center justify-center rounded-lg border-2 border-transparent bg-verde-ruta px-6 py-3 text-base font-semibold text-crema transition-colors hover:bg-verde-ruta/80 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Reservar ruta</button>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </article>
+                </div>
+        </section>    
+                
+
+        <!-- ALERTAS -->
+        <section class="mt-16" aria-labelledby="titulo-alertas">
+            <h2 id="titulo-alertas" class="font-montserrat text-2xl font-bold text-crema">Alertas</h2>
+            <p class="mt-2 text-crema">Información, éxito y advertencia.</p>
+
+            <div class="mt-6 grid max-w-2xl gap-4">
+
+                <div class="rounded-lg border-l-4 border-azul-noche brightness-550 bg-azul-noche/20 p-4">
+                    <p class="font-semibold text-[color-mix(in_srgb,var(--color-azul-noche),white_80%)]">Información</p>
+                    <p class="mt-1 text-sm text-crema">Las rutas salen a las 7 p. m. y duran entre 2 y 4 horas.</p>
+                </div>
+
+                <div role="status" class="rounded-lg border-l-4 border-verde-ruta brightness-100 bg-verde-ruta/25 p-4">
+                    <p class="font-semibold text-[color-mix(in_srgb,var(--color-verde-ruta),white_60%)]">Éxito</p>
+                    <p class="mt-1 text-sm text-crema">Tu reserva quedó confirmada. Te enviamos los detalles por correo.</p>
+                </div>
+
+                <div class="rounded-lg border-l-4 border-[color-mix(in_srgb,var(--color-amarillo-farol),black_30%)] bg-[color-mix(in_srgb,var(--color-amarillo-farol),black_70%)] p-4">
+                    <p class="font-semibold text-[color-mix(in_srgb,var(--color-amarillo-farol),white_40%)]">Advertencia</p>
+                    <p class="mt-1 text-sm text-crema">Quedan pocos cupos disponibles para esta fecha.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CAMPOS -->
+        <section class="mt-16" aria-labelledby="titulo-campos">
+            <h2 id="titulo-campos" class="font-montserrat text-2xl font-bold text-crema">Campos de formulario</h2>
+            <p class="mt-2 text-crema">Correo y celular, con etiqueta, ayuda y foco visible.</p>
+
+            <div class="mt-6 grid max-w-md gap-6">
+
+                <div>
+                    <label for="correo" class="block text-sm font-semibold text-crema">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" autocomplete="email" placeholder="nombre@correo.com" aria-describedby="correo-ayuda" class="mt-2 block w-full rounded-lg border-2 border-crema/50 bg-azul-noche px-4 py-3 text-base text-crema placeholder:text-crema/50 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">
+                    <p id="correo-ayuda" class="mt-2 text-sm text-crema/50">Te escribiremos a este correo para confirmar tu reserva.</p>
+                </div>
+
+                <div>
+                    <label for="celular" class="block text-sm font-semibold text-crema">Número de celular</label>
+                    <input type="tel" id="celular" name="celular" inputmode="numeric" autocomplete="tel" placeholder="3001234567" aria-describedby="celular-ayuda" class="mt-2 block w-full rounded-lg border-2 border-crema/50 bg-azul-noche px-4 py-3 text-base text-crema placeholder:text-crema/50 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">
+                    <p id="celular-ayuda" class="mt-2 text-sm text-crema/50">Escribe 10 dígitos, sin espacios ni guiones.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
