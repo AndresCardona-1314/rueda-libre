@@ -476,3 +476,173 @@ colores, tipografía, botones, tablas, tarjetas, formularios y estados visuales.
 ------------------------------------
 
 cuando busque bg-slate-950 aparareció esa clase en el archivo, sin embargo, cuando busque bg-pink-500 no aparece en el archivo. Esto sucede porque Tailwind crea el css netamente con las clases que utiliza el html.
+
+
+-------------------------------
+
+## Reglas del kit de componentes de Nocturna
+
+**Regla 1: radios y bordes**
+- Botones, campos y alertas: `rounded-lg`. Cards: `rounded-2xl`. Etiquetas: `rounded-full`.
+- Controles: `border-2`. Cards: `border`. Alertas: `border-l-4`.
+
+**Regla 2: escala de espaciado**
+- Interno: 1, 2, 3, 4 y 6. Externo: 8, 10, 12, 16 y 24.
+- Rellenos: controles `py-3` (botón `px-6`, campo `px-4`), alertas `p-4`, cards `p-6`.
+
+**Regla 3: colores**
+- Fondo `slate-950`, superficies `slate-900`, acento `indigo`.
+- Estados: información `sky`, éxito `emerald`, advertencia `amber`, error `rose`.
+- Anillo de foco: `ring-2 ring-indigo-300 ring-offset-2`, con el `ring-offset` del color de la superficie.
+
+**Por qué:** que botón, card, alerta y campo se vean como parte de la misma familia, y poder cambiar un valor sin pensar en cada componente.
+
+**Cómo lo verifiqué:** búsquedas con expresiones regulares en los HTML (0 resultados) y revisión visual.
+
+
+
+---------------------------------
+
+## Qué se rompe en rueda Nocturna
+
+Se desborda todo menos el pie de página y los pasos para reservar
+
+
+----------------------------------
+
+
+## Tabla de pruebas responsive
+
+| Ancho del viewport | Encabezado                                           | Rutas      | Pasos      | Resultado de la prueba |
+|-------------------:|-----------------------------------------------------:|----------: |-------------------------------------|
+| 360 px             | Apilado; enlaces ocultos; botón «Inscríbete» visible | 1 columna  | 1 columna  | Resultado esperado     |
+| 768 px             | En fila; enlaces visibles                            | 2 columnas | 2 columnas | Resultado esperado     |
+| 1024 px            | En fila; enlaces visibles                            | 3 columnas | 4 columnas | Resultado esperado     |
+| 1280 px            | En fila; enlaces visibles                            | 3 columnas | 4 columnas | Resultado esperado     |
+
+
+----------------------------------------------------
+
+
+## Registro: análisis de clases y comparativa Tailwind vs. Bootstrap
+
+
+La compilación minificada actual mide **25.257 bytes**; comprimida localmente con gzip, **4.973 bytes**. El `src/output.css` enlazado desde la landing mide 30.752 bytes.
+
+### Listas de clases repetidas
+
+Conteo de cada token `class` en `nocturna/index.html`:
+
+| Clase                                    | Veces         | Uso principal                                    |
+|------------------------------------------|--------------:|--------------------------------------------------|
+| `text-azul-noche`                        | 35            | Color de texto                                   |
+| `dark:text-crema`                        | 33            | Color de texto en modo oscuro                    |
+| `font-semibold`                          | 17            | Peso tipográfico                                 |
+| `font-montserrat`                        | 14            | Tipografía de encabezados                        |
+| `text-crema`                             | 14            | Color de texto                                   |
+| `text-base`                              | 13            | Tamaño tipográfico base                          |
+| `text-xs`                                | 12            | Texto pequeño y etiquetas                        |
+| Cada clase de `focus-visible` compartida | 12            | Anillo/contorno de foco en 6 enlaces             |
+| `mt-4`                                   | 10            | Margen superior                                  |
+| `uppercase`, `tracking-wide`             | 9 cada una    | Etiquetas de datos                               |
+| `mt-1`                                   | 9             | Separación de valores                            |
+
+Patrones completos: las clases de cada `dt` y cada `dd` se repiten **9 veces**; el patrón de enlaces con foco, **6 veces**; el contenedor `mx-auto max-w-5xl px-6`, **4 veces**; el `<article>` de ruta, **3 veces**; el cuerpo de tarjeta y el botón «Reservar ruta», **3 veces** cada uno. Hay **5** acciones verdes: 3 botones de reserva y 2 enlaces de inscripción.
+
+### Orden por categoría
+
+Las siguientes listas agrupan las utilidades por layout, espaciado, tipografía, color y estados. Ese orden se aplicó dentro de los `@apply` de los botones en `input.css`; los grupos de etiquetas, datos y tarjetas documentan su clasificación, sin reordenar sus atributos `class` en el HTML.
+
+**Botones y enlaces verdes**
+
+- Layout: `inline-flex items-center justify-center rounded-lg border-2 border-transparent`; reserva añade `w-full`.
+- Espaciado: `px-6 py-3`; reserva añade `mt-4`, la inscripción inferior `mt-5`.
+- Tipografía: `font-semibold`; reserva y el enlace del encabezado añaden `text-base`.
+- Color: `bg-verde-ruta text-crema`.
+- Estados: `transition-colors hover:bg-verde-ruta/80 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche`.
+
+**Etiquetas de dificultad** (3, una por ruta)
+
+- Layout: `inline-flex items-center self-start rounded-full`.
+- Espaciado: `px-3 py-1`.
+- Tipografía: `text-xs font-semibold`.
+- Color: `text-azul-noche` y un fondo por nivel: verde claro (fácil), `bg-amarillo-farol` (medio), `bg-naranja-pedal` (difícil).
+- Estados: ninguno.
+
+
+**Tarjeta de ruta** (el mismo `<article>` aparece 3 veces)
+
+- Layout: `flex h-full flex-col overflow-hidden rounded-2xl border`.
+- Espaciado: ninguno en el `article`; su contenedor interno usa `p-6`.
+- Tipografía: `text-azul-noche dark:text-crema`.
+- Color: `border-azul-noche/20 bg-azul-noche/5 dark:border-crema/20 dark:bg-crema/5 dark:text-crema`.
+- Estados: `transition duration-200 hover:border-naranja-pedal hover:shadow-xl hover:shadow-naranja-pedal/20 focus-within:border-naranja-pedal`.
+
+Las tarjetas son piezas grandes del kit: se conserva su marcado repetido, sin crear clases propias para ellas.
+
+
+### Medición de CSS y JavaScript
+
+La referencia Bootstrap carga `bootstrap.min.css` y `bootstrap.bundle.min.js` versión 5.3.8. El navegador mostró los tamaños codificados indicados abajo; como los recursos estaban en caché, `transferSize` dio cero. Se contrastó con solicitudes HTTP gzip a las mismas URL.
+
+| Recurso                            | Sin comprimir | Codificado/transferido                                 |
+|------------------------------------|--------------:|-------------------------------------------------------:|
+| Tailwind de la landing, minificado | 25.257 B      | 4.973 B (gzip local)                                   |
+| Bootstrap CSS                      | 232.111 B     | 33.048 B (navegador en caché) / 30.872 B (HTTP gzip)   |
+| Bootstrap JS bundle                | 80.496 B      | 24.469 B (navegador en caché) / 23.743 B (HTTP gzip)   |
+| Bootstrap CSS + JS                 | 312.607 B     | 57.517 B (suma codificada) / 54.615 B (suma HTTP gzip) |
+
+El CSS Tailwind minificado ocupa cerca de **89,1 % menos** que el CSS Bootstrap sin comprimir. En gzip, ocupa **83,9 % menos** que el CSS Bootstrap; comparado con CSS y JS Bootstrap juntos, **90,9 % menos**. Esta última comparación no iguala funcionalidades: la landing no carga JavaScript de framework y el bundle Bootstrap habilita componentes interactivos.
+
+
+### Comparativa y recomendación
+
+**Curva de aprendizaje**
+
+- **Bootstrap:** Componentes conocidos y listos aceleran una interfaz estándar; es necesario aprender sus clases, breakpoints y convenciones. La experiencia previa de la flota registró menos tiempo con Bootstrap, aunque no fue una prueba controlada con alcance idéntico.
+- **Tailwind en la landing nocturna:** Las utilidades permiten construir el diseño directamente en el HTML; requiere familiarizarse con sus nombres, tema y CLI.
+
+**Personalización**
+
+- **Bootstrap:** Variables y componentes resuelven rápido lo común; personalizaciones profundas pueden exigir sobrescrituras y revisar la cascada.
+- **Tailwind en la landing nocturna:** El tema local admite colores y tipografías de marca con control preciso. `@apply` puede reunir repeticiones pequeñas como los botones.
+
+**Tamaño final**
+
+- **Bootstrap:** CSS + JS medidos: 312.607 B sin comprimir y 54.615 B en cuerpos gzip.
+- **Tailwind en la landing nocturna:** CSS generado para esta landing: 25.257 B sin comprimir y 4.973 B gzip; no requiere JavaScript de Tailwind en el navegador.
+
+**Casos de uso**
+
+- **Bootstrap:** Sitios multipágina con componentes listos, comportamiento JavaScript integrado y necesidad de avanzar rápido.
+- **Tailwind en la landing nocturna:** Landings con identidad visual propia donde conviene generar solo las utilidades usadas y no se requieren componentes JavaScript del framework.
+
+**Recomendación para Rueda Libre:** Ambas herramientas tienen sus pro y contras. Por un lado Bootstrap te genera unas plantillas más predeterminadas de cada clase que utilizas, sin embargo, su personalización puede ser limitada y hay que generar un archivo css a mano.
+Por otro lado Tailwind te permite utilizar clases más específicas de modo de que puedas personalizar tu página como quiera, a su vez que te genera el css casi que de manera automatica. Sin embargo, el html puede quedar un poco saturado de texto y clases.  
+
+----------------------------
+
+## Tiempo de desarrollo formulario
+
+desarrollar todo el formulario me tomó  al rededor de 40 a 50 min. Ya luego cuando quise agregarle el campo de documento, los placeholders, la validación del formulario y los terminos y condiciones me tiré en total aproximadamente 80 min.
+
+
+## Tiempo de desarrollo conexión entre páginas
+
+50 min aproximadamente
+
+## Tiempo de desarrollo planes
+
+55 min
+
+
+
+
+
+
+
+
+
+
+
+
