@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UFT-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Rueda nocturna">
     
@@ -16,24 +16,27 @@
 
     <title>Rueda Nocturna</title>
 
+    <link rel="icon" href="../img/Logo_Rueda_Libre.png">
+
     <link href="./src/output.css" rel="stylesheet">
 
 </head>
 
-<body class="bg-crema font-open-sans text-azul-noche dark:bg-azul-noche dark:text-crema">
+<body class="font-open-sans bg-crema text-azul-noche dark:bg-azul-noche dark:text-crema">
 
-    <header class="bg-azul-noche/95 dark:bg-azul-noche"> 
-        <div class="mx-auto max-w-5xl px-6 py-4"> 
-            <div class="flex flex-col items-start gap-4 py-4 md:flex-row md:items-center md:justify-between md:gap-6"> 
-                <a href="#inicio" class="font-bold text-crema hover:text-amarillo-farol focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Rueda Libre</a> 
+    <header class="bg-azul-noche text-crema dark:bg-azul-noche/95 dark:text-crema"> 
+        <div class="max-w-5xl mx-auto px-6 py-4"> 
+            <div class="flex flex-col items-start md:flex-row md:items-center md:justify-between gap-4 py-4 md:gap-6"> 
+                <a href="../index.html" class="font-bold text-crema hover:text-amarillo-farol focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Rueda Libre</a> 
                 <nav aria-label="Navegación principal" class="hidden md:block">
                     <ul class="flex items-center gap-6"> 
                         <li><a href="#rutas" class="text-crema hover:text-amarillo-farol focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Rutas</a></li> 
                         <li><a href="#como-funciona" class="text-crema hover:text-amarillo-farol focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">¿Cómo funciona?</a></li> 
-                        <li><a href="#inscripcion" class="text-crema hover:text-amarillo-farol focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Inscripción</a></li> 
+                        <li><a href="#inscripcion" class="text-crema hover:text-amarillo-farol focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Inscripción</a></li>
+                        <li><a href="../paginas/reservas.html" class="text-crema hover:text-amarillo-farol focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Reserva tu bici</a></li>
                     </ul> 
                 </nav> 
-                <a href="#inscripcion" class="inline-flex items-center justify-center rounded-lg border-2 border-transparent bg-verde-ruta px-6 py-3 text-base font-semibold text-crema transition-colors hover:bg-verde-ruta/80 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Inscríbete</a> 
+                <a href="#inscripcion" class="boton-ruta text-base">Inscríbete</a> 
             </div> 
         </div> 
     </header> 
@@ -44,25 +47,25 @@
 
     <main> 
         <section id="inicio" aria-labelledby="titulo-inicio" class="py-12 sm:py-14 md:py-16 lg:py-20"> 
-            <div class="mx-auto max-w-5xl px-6"> 
-                <h1 id="titulo-inicio" class="font-montserrat text-4xl text-center font-bold text-azul-noche dark:text-crema sm:text-5xl lg:text-6xl">Rueda Nocturna</h1> 
+            <div class="max-w-5xl mx-auto px-6"> 
+                <h1 id="titulo-inicio" class="font-montserrat text-4xl text-center font-bold sm:text-5xl lg:text-6xl text-azul-noche dark:text-crema">Rueda Nocturna</h1> 
                 <p class="mt-4 text-center text-azul-noche dark:text-crema">Descubre Medellín en bici cuando se encienden las luces.</p> 
             </div> 
         </section> 
 
         <section id="rutas" aria-labelledby="titulo-rutas" class="py-16"> 
-            <div class="mx-auto max-w-5xl px-6">
-                <h2 id="titulo-rutas" class="font-montserrat text-2xl font-bold text-azul-noche dark:text-crema sm:text-3xl lg:text-4xl">Rutas nocturnas</h2> 
-                <ul class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"> 
+            <div class="max-w-5xl mx-auto px-6">
+                <h2 id="titulo-rutas" class="font-montserrat text-2xl font-bold sm:text-3xl lg:text-4xl text-azul-noche dark:text-crema">Rutas nocturnas</h2> 
+                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-8"> 
                     <li>
                         <article class="flex h-full flex-col overflow-hidden rounded-2xl border border-azul-noche/20 bg-azul-noche/5 text-azul-noche transition duration-200 hover:border-naranja-pedal hover:shadow-xl hover:shadow-naranja-pedal/20 focus-within:border-naranja-pedal dark:border-crema/20 dark:bg-crema/5 dark:text-crema">
                             <img src="img/luces_del_centro.png" alt="Ruta luces del centro" class="h-48 w-full object-contain">
 
                             <div class="flex flex-1 flex-col p-6">
-                                <span class="inline-flex items-center self-start rounded-full bg-[color-mix(in_srgb,var(--color-verde-ruta),white_30%)] brightness-150 px-3 py-1 text-xs font-semibold text-azul-noche ">Nivel fácil</span>
-                                <h3 class="mt-4 font-montserrat text-xl font-bold text-azul-noche dark:text-crema">Ruta luces del centro</h3>
+                                <span class="inline-flex items-center self-start rounded-full px-3 py-1 text-xs font-semibold bg-[color-mix(in_srgb,var(--color-verde-ruta),white_30%)] brightness-150 text-azul-noche">Nivel fácil</span>
+                                <h3 class="text-xl mt-4 font-montserrat font-bold text-azul-noche dark:text-crema">Ruta luces del centro</h3>
 
-                                <dl class="mt-4 grid grid-cols-2 gap-4">
+                                <dl class="grid grid-cols-2 mt-4 gap-4">
                                     <div>
                                         <dt class="text-xs uppercase tracking-wide text-azul-noche/70 dark:text-crema/70">Distancia</dt>
                                         <dd class="mt-1 text-base font-semibold text-azul-noche dark:text-crema">10 km</dd>
@@ -83,7 +86,7 @@
 
                                 <div class="mt-auto pt-6">
                                     <p class="text-3xl font-bold text-azul-noche dark:text-crema">$55.000 <span class="text-sm font-normal text-azul-noche/70 dark:text-crema/70">por persona</span></p>
-                                    <button type="button" class="mt-4 inline-flex w-full items-center justify-center rounded-lg border-2 border-transparent bg-verde-ruta px-6 py-3 text-base font-semibold text-crema transition-colors hover:bg-verde-ruta/80 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Reservar ruta</button>
+                                    <button type="button" class="boton-ruta boton-ruta-reserva">Reservar ruta</button>
 
                                 </div>
 
@@ -99,11 +102,11 @@
 
                             <div class="flex flex-1 flex-col p-6">
 
-                                <span class="inline-flex items-center self-start rounded-full bg-amarillo-farol px-3 py-1 text-xs font-semibold text-azul-noche">Nivel medio</span>
+                                <span class="inline-flex items-center self-start rounded-full px-3 py-1 text-xs font-semibold bg-amarillo-farol text-azul-noche">Nivel medio</span>
 
-                                <h3 class="mt-4 font-montserrat text-xl font-bold text-azul-noche dark:text-crema">Ruta miradores de la ciudad</h3>
+                                <h3 class="text-xl mt-4 font-montserrat font-bold text-azul-noche dark:text-crema">Ruta miradores de la ciudad</h3>
 
-                                <dl class="mt-4 grid grid-cols-2 gap-4">
+                                <dl class="grid grid-cols-2 mt-4 gap-4">
                                     <div>
                                         <dt class="text-xs uppercase tracking-wide text-azul-noche/70 dark:text-crema/70">Distancia</dt>
                                         <dd class="mt-1 text-base font-semibold text-azul-noche dark:text-crema">16 km</dd>
@@ -120,7 +123,7 @@
 
                                 <div class="mt-auto pt-6">
                                     <p class="text-3xl font-bold text-azul-noche dark:text-crema">$75.000 <span class="text-sm font-normal text-azul-noche/70 dark:text-crema/70">por persona</span></p>
-                                    <button type="button" class="mt-4 inline-flex w-full items-center justify-center rounded-lg border-2 border-transparent bg-verde-ruta px-6 py-3 text-base font-semibold text-crema transition-colors hover:bg-verde-ruta/80 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Reservar ruta</button>
+                                    <button type="button" class="boton-ruta boton-ruta-reserva">Reservar ruta</button>
                                 </div>
 
                             </div>
@@ -134,11 +137,11 @@
 
                             <div class="flex flex-1 flex-col p-6">
 
-                                <span class="inline-flex items-center self-start rounded-full bg-naranja-pedal px-3 py-1 text-xs font-semibold text-azul-noche">Nivel difícil</span>
+                                <span class="inline-flex items-center self-start rounded-full px-3 py-1 text-xs font-semibold bg-naranja-pedal text-azul-noche">Nivel difícil</span>
 
-                                <h3 class="mt-4 font-montserrat text-xl font-bold text-azul-noche dark:text-crema">Ruta luna en las palmas</h3>
+                                <h3 class="text-xl mt-4 font-montserrat font-bold text-azul-noche dark:text-crema">Ruta luna en las palmas</h3>
 
-                                <dl class="mt-4 grid grid-cols-2 gap-4">
+                                <dl class="grid grid-cols-2 mt-4 gap-4">
                                     <div>
                                         <dt class="text-xs uppercase tracking-wide text-azul-noche/70 dark:text-crema/70">Distancia</dt>
                                         <dd class="mt-1 text-base font-semibold text-azul-noche dark:text-crema">22 km</dd>
@@ -155,7 +158,7 @@
 
                                 <div class="mt-auto pt-6">
                                     <p class="text-3xl font-bold text-azul-noche dark:text-crema">$95.000 <span class="text-sm font-normal text-azul-noche/70 dark:text-crema/70">por persona</span></p>
-                                    <button type="button" class="mt-4 inline-flex w-full items-center justify-center rounded-lg border-2 border-transparent bg-verde-ruta px-6 py-3 text-base font-semibold text-crema transition-colors hover:bg-verde-ruta/80 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Reservar ruta</button>
+                                    <button type="button" class="boton-ruta boton-ruta-reserva">Reservar ruta</button>
                                 </div>
 
                             </div>
@@ -163,12 +166,82 @@
                     </li> 
                 </ul>
             </div> 
-        </section> 
+        </section>
+        
+        <section id="planes" aria-labelledby="titulo-planes" class="py-16">
+            <div class="max-w-5xl mx-auto px-6">
+                <h2 id="titulo-planes"
+                    class="font-montserrat text-2xl font-bold text-azul-noche dark:text-crema sm:text-3xl lg:text-4xl">
+                Planes
+                </h2>
+
+                <ul class="mt-8 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-3">
+                    <li class="min-w-0">
+                        <article class="flex h-full flex-col rounded-2xl border border-azul-noche/20 bg-azul-noche/5 p-6 text-azul-noche dark:border-crema/20 dark:bg-crema/5 dark:text-crema">
+                            
+                            <h3 class="font-montserrat text-xl font-bold">Plan individual</h3>
+                            <p class="mt-4 text-3xl font-bold text-azul-noche dark:text-crema">$55.000 <span class="text-sm font-normal text-azul-noche/70 dark:text-crema/70">por persona</span></p>
+                            <p class="mt-4 text-3xl font-semibold text-azul-noche dark:text-crema text-center">Incluye</p>
+                            <ul class="mt-5 flex flex-col gap-3">
+                                
+                                <li class="mt-4">Bicicleta y casco</li>
+                                <li>Luces LED y chaleco</li>
+                                <li>Guía certificado</li>
+                                <li>Hidratación</li>
+                            </ul>
+                            <div class="mt-auto pt-6">
+                                <a href="#inscripcion" class="boton-ruta boton-ruta-reserva">Elegir plan</a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="min-w-0">
+                        <article class="flex h-full flex-col rounded-2xl border-4 border-naranja-pedal bg-amarillo-farol/20 p-6 text-azul-noche dark:border-verde-ruta dark:bg-verde-ruta/10 dark:text-crema">
+                            <div class="mb-4 flex min-h-8 items-center">
+                                <span class="rounded-full bg-amarillo-farol px-3 py-1 text-xs font-semibold text-azul-noche">Más elegido</span>
+                            </div>
+                            <h3 class="font-montserrat text-xl font-bold">Plan Pareja</h3>
+                            <p class="mt-4 text-3xl font-bold text-azul-noche dark:text-crema">$99.000 <span class="text-sm font-normal text-azul-noche/70 dark:text-crema/70">por persona</span></p>
+                            <p class="mt-4 text-3xl font-semibold text-azul-noche dark:text-crema text-center">Incluye</p>
+                            <ul class="mt-5 flex flex-col gap-3">
+                                
+                                <li class="mt-4">Todo lo del plan individual</li>
+                                <li>Foto del recorrido</li>
+                                <li>Snack para dos</li>
+                                <li>Prioridad en la ruta</li>
+                            </ul>
+                            <div class="mt-auto pt-6">
+                                <a href="#inscripcion" class="boton-ruta boton-ruta-reserva">Elegir plan</a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="min-w-0">
+                        <article class="flex h-full flex-col rounded-2xl border border-azul-noche/20 bg-azul-noche/5 p-6 text-azul-noche dark:border-crema/20 dark:bg-crema/5 dark:text-crema">
+                            
+                            <h3 class="font-montserrat text-xl font-bold">Plan grupal (4 a 8)</h3>
+                            <p class="mt-4 text-3xl font-bold text-azul-noche dark:text-crema">$45.000 <span class="text-sm font-normal text-azul-noche/70 dark:text-crema/70">por persona</span></p>
+                            <p class="mt-4 text-3xl font-semibold text-azul-noche dark:text-crema text-center">Incluye</p>
+                            <ul class="mt-5 flex flex-col gap-3">
+                                
+                                <li class="mt-4">Todo lo del plan individual</li>
+                                <li>Guía exclusivo</li>
+                                <li>Horario a elección</li>
+                                <li>Fotos del grupo</li>
+                            </ul>
+                            <div class="mt-auto pt-6">
+                                <a href="#inscripcion" class="boton-ruta boton-ruta-reserva">Elegir plan</a>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
         <section id="como-funciona" aria-labelledby="titulo-pasos" class="py-16"> 
-            <div class="mx-auto max-w-5xl px-6"> 
-                <h2 id="titulo-pasos" class="font-montserrat text-2xl font-bold text-azul-noche dark:text-crema sm:text-3xl lg:text-4xl">¿Cómo funciona?</h2> 
-                <ol class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="max-w-5xl mx-auto px-6"> 
+                <h2 id="titulo-pasos" class="font-montserrat text-2xl font-bold sm:text-3xl lg:text-4xl text-azul-noche dark:text-crema">¿Cómo funciona?</h2> 
+                <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-8 gap-6">
                     <li>
                         <h3 class="font-montserrat text-azul-noche dark:text-crema">1. Elige tu ruta</h3>
                         <p class="text-azul-noche dark:text-crema">Encuentra el recorrido que prefieras.</p>
@@ -189,17 +262,132 @@
             </div> 
         </section> 
 
-        <section id="inscripcion" aria-labelledby="titulo-inscripcion" class="bg-azul-noche/10 py-12 dark:bg-crema/10"> 
-            <div class="mx-auto max-w-5xl px-6"> 
-                <h2 id="titulo-inscripcion" class="font-montserrat text-2xl font-bold text-azul-noche dark:text-crema sm:text-3xl lg:text-4xl">¿Listo para rodar?</h2> 
-                <a href="#inscripcion" class="mt-5 inline-flex items-center justify-center rounded-lg border-2 border-transparent bg-verde-ruta px-6 py-3 font-semibold text-crema transition-colors hover:bg-verde-ruta/80 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche">Inscríbete</a> 
+        <section id="listo-para-rodar" aria-labelledby="titulo-listo-para-rodar" class="py-12 bg-verde-ruta/10 dark:bg-verde-ruta/20"> 
+            <div class="max-w-5xl mx-auto px-6"> 
+                <h2 id="titulo-listo-para-rodar" class="font-montserrat text-2xl font-bold sm:text-3xl lg:text-4xl text-azul-noche dark:text-crema">¿Listo para rodar?</h2> 
+                <a href="#inscripcion" class="boton-ruta boton-ruta-inscripcion">Inscríbete</a> 
             </div> 
-        </section> 
+        </section>
+        
+        <section id="inscripcion" aria-labelledby="titulo-inscripcion" class="py-16 bg-azul-noche/5 dark:bg-crema/5">
+            <div class="max-w-5xl mx-auto px-6">
+                <h2 id="titulo-inscripcion" class="font-montserrat text-2xl font-bold sm:text-3xl text-azul-noche dark:text-crema">
+                    Formulario de inscripción
+                </h2>
+
+                <form id="form-inscripcion" action="#" method="post" novalidate class="mt-8 space-y-8">
+                    <fieldset class="rounded-lg border border-azul-noche/20 p-6 dark:border-crema/20">
+                        <legend class="px-2 font-montserrat font-bold text-azul-noche dark:text-crema">Tus datos</legend>
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                            <div class="md:col-span-2">
+                                <label for="nombre" class="block text-sm font-semibold text-azul-noche dark:text-crema">Nombre completo</label>
+                                <input id="nombre" name="nombre" type="text" autocomplete="name" minlength="3" placeholder="Ej. Ana Torres" data-error="Escribe tu nombre completo; debe tener al menos 3 caracteres." aria-describedby="error-nombre" required class="mt-2 block w-full rounded-lg border-2 border-azul-noche/30 bg-crema px-4 py-3 text-base text-azul-noche aria-invalid:border-red-700 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:border-crema/50 dark:bg-azul-noche dark:text-crema dark:aria-invalid:border-red-300 dark:focus-visible:ring-offset-azul-noche">
+                                <p id="error-nombre" class="mt-2 hidden text-sm text-red-700 dark:text-red-300"></p>
+                            </div>
+
+                            <div>
+                                <label for="identificacion" class="block text-sm font-semibold text-azul-noche dark:text-crema">Número de documento</label>
+                                <input id="identificacion" name="identificacion" type="text" inputmode="numeric" autocomplete="off" pattern="[0-9]{6,10}" minlength="6" maxlength="10" placeholder="Ej. 123456789" data-error="Ingresa entre 6 y 10 dígitos numéricos, sin letras ni espacios." aria-describedby="error-identificacion" required class="mt-2 block w-full rounded-lg border-2 border-azul-noche/30 bg-crema px-4 py-3 text-base text-azul-noche aria-invalid:border-red-700 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:border-crema/50 dark:bg-azul-noche dark:text-crema dark:aria-invalid:border-red-300 dark:focus-visible:ring-offset-azul-noche">
+                                <p id="error-identificacion" class="mt-2 hidden text-sm text-red-700 dark:text-red-300"></p>
+                            </div>
+
+                            <div>
+                                <label for="celular" class="block text-sm font-semibold text-azul-noche dark:text-crema">Celular</label>
+                                <input id="celular" name="celular" type="tel" inputmode="numeric" autocomplete="tel" pattern="3[0-9]{9}" minlength="10" maxlength="10" placeholder="Ej. 3001234567" data-error="Ingresa exactamente 10 dígitos y comienza por 3. Ejemplo: 3001234567." aria-describedby="ayuda-celular error-celular" required class="mt-2 block w-full rounded-lg border-2 border-azul-noche/30 bg-crema px-4 py-3 text-base text-azul-noche aria-invalid:border-red-700 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:border-crema/50 dark:bg-azul-noche dark:text-crema dark:aria-invalid:border-red-300 dark:focus-visible:ring-offset-azul-noche">
+                                <p id="ayuda-celular" class="mt-2 text-sm text-azul-noche/70 dark:text-crema/70">Debe tener 10 dígitos y comenzar por 3.</p>
+                                <p id="error-celular" class="mt-2 hidden text-sm text-red-700 dark:text-red-300"></p>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label for="correo" class="block text-sm font-semibold text-azul-noche dark:text-crema">Correo electrónico</label>
+                                <input id="correo" name="correo" type="email" autocomplete="email" placeholder="Ej. ana.torres@correo.com" data-error="Escribe un correo válido con nombre, @ y dominio. Ejemplo: ana@correo.com." aria-describedby="error-correo" required class="mt-2 block w-full rounded-lg border-2 border-azul-noche/30 bg-crema px-4 py-3 text-base text-azul-noche aria-invalid:border-red-700 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:border-crema/50 dark:bg-azul-noche dark:text-crema dark:aria-invalid:border-red-300 dark:focus-visible:ring-offset-azul-noche">
+                                <p id="error-correo" class="mt-2 hidden text-sm text-red-700 dark:text-red-300"></p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="rounded-lg border border-azul-noche/20 p-6 dark:border-crema/20">
+                        <legend class="px-2 font-montserrat font-bold text-azul-noche dark:text-crema">Detalles de la salida</legend>
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                            <div>
+                                <label for="ruta" class="block text-sm font-semibold text-azul-noche dark:text-crema">Ruta</label>
+                                <select id="ruta" name="ruta" data-error="Selecciona una de las tres rutas disponibles." aria-describedby="error-ruta" required class="mt-2 block w-full rounded-lg border-2 border-azul-noche/30 bg-crema px-4 py-3 text-base text-azul-noche aria-invalid:border-red-700 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:border-crema/50 dark:bg-azul-noche dark:text-crema dark:aria-invalid:border-red-300 dark:focus-visible:ring-offset-azul-noche">
+                                    <option value="" selected disabled>Elige una ruta</option>
+                                    <option value="luces-centro">Luces del centro</option>
+                                    <option value="miradores">Miradores de la ciudad</option>
+                                    <option value="luna-palmas">Luna en las Palmas</option>
+                                </select>
+                                <p id="error-ruta" class="mt-2 hidden text-sm text-red-700 dark:text-red-300"></p>
+                            </div>
+
+                            <div>
+                                <label for="dia" class="block text-sm font-semibold text-azul-noche dark:text-crema">Día de salida</label>
+                                <select id="dia" name="dia" data-error="Selecciona jueves, viernes o sábado." aria-describedby="error-dia" required class="mt-2 block w-full rounded-lg border-2 border-azul-noche/30 bg-crema px-4 py-3 text-base text-azul-noche aria-invalid:border-red-700 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:border-crema/50 dark:bg-azul-noche dark:text-crema dark:aria-invalid:border-red-300 dark:focus-visible:ring-offset-azul-noche">
+                                    <option value="" selected disabled>Elige un día</option>
+                                    <option value="jueves">Jueves</option>
+                                    <option value="viernes">Viernes</option>
+                                    <option value="sabado">Sábado</option>
+                                </select>
+                                <p id="error-dia" class="mt-2 hidden text-sm text-red-700 dark:text-red-300"></p>
+                            </div>
+
+                            <div>
+                                <label for="acompanantes" class="block text-sm font-semibold text-azul-noche dark:text-crema">Número de acompañantes</label>
+                                <input id="acompanantes" name="acompanantes" type="number" min="0" max="3" step="1" placeholder="0 a 3" data-error="Ingresa un número entero entre 0 y 3; 0 significa que no llevas acompañantes." aria-describedby="error-acompanantes" required class="mt-2 block w-full rounded-lg border-2 border-azul-noche/30 bg-crema px-4 py-3 text-base text-azul-noche aria-invalid:border-red-700 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:border-crema/50 dark:bg-azul-noche dark:text-crema dark:aria-invalid:border-red-300 dark:focus-visible:ring-offset-azul-noche">
+                                <p id="error-acompanantes" class="mt-2 hidden text-sm text-red-700 dark:text-red-300"></p>
+                            </div>
+
+                            <div>
+                                <label for="experiencia" class="block text-sm font-semibold text-azul-noche dark:text-crema">Nivel de experiencia</label>
+                                <select id="experiencia" name="experiencia" data-error="Selecciona principiante, intermedio o avanzado." aria-describedby="error-experiencia" required class="mt-2 block w-full rounded-lg border-2 border-azul-noche/30 bg-crema px-4 py-3 text-base text-azul-noche aria-invalid:border-red-700 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:border-crema/50 dark:bg-azul-noche dark:text-crema dark:aria-invalid:border-red-300 dark:focus-visible:ring-offset-azul-noche">
+                                    <option value="" selected disabled>Elige tu nivel</option>
+                                    <option value="principiante">Principiante</option>
+                                    <option value="intermedio">Intermedio</option>
+                                    <option value="avanzado">Avanzado</option>
+                                </select>
+                                <p id="error-experiencia" class="mt-2 hidden text-sm text-red-700 dark:text-red-300"></p>
+                            </div>
+
+                            <div>
+                                <label for="bicicleta" class="block text-sm font-semibold text-azul-noche dark:text-crema">¿Tienes bicicleta propia?</label>
+                                <select id="bicicleta" name="bicicleta" data-error="Selecciona Sí o No." aria-describedby="error-bicicleta" required class="mt-2 block w-full rounded-lg border-2 border-azul-noche/30 bg-crema px-4 py-3 text-base text-azul-noche aria-invalid:border-red-700 focus-visible:border-naranja-pedal focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:border-crema/50 dark:bg-azul-noche dark:text-crema dark:aria-invalid:border-red-300 dark:focus-visible:ring-offset-azul-noche">
+                                    <option value="" selected disabled>Selecciona Sí o No</option>
+                                    <option value="si">Sí</option>
+                                    <option value="no">No</option>
+                                </select>
+                                <p id="error-bicicleta" class="mt-2 hidden text-sm text-red-700 dark:text-red-300"></p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="rounded-lg border border-azul-noche/20 p-6 dark:border-crema/20">
+                        <legend class="px-2 font-montserrat font-bold text-azul-noche dark:text-crema">Condiciones de inscripción</legend>
+                        <details class="mb-5 rounded-lg border border-azul-noche/20 p-4 dark:border-crema/20">
+                            <summary class="cursor-pointer rounded-lg font-semibold text-azul-noche focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:text-crema dark:focus-visible:ring-offset-azul-noche">Leer términos y condiciones</summary>
+                            <div class="mt-4 space-y-2 text-sm text-azul-noche dark:text-crema">
+                                <p>Al inscribirte, confirmas que los datos proporcionados son correctos y que participarás en la ruta y el día seleccionados.</p>
+                                <p>Debes seguir las indicaciones del guía y utilizar los elementos de seguridad requeridos durante el recorrido. Si no tienes bicicleta propia, coordina previamente la disponibilidad con Rueda Libre.</p>
+                                <p>La inscripción queda sujeta a confirmación de cupo por parte de Rueda Libre. Consulta con el equipo cualquier duda sobre cambios o cancelaciones antes de la salida.</p>
+                            </div>
+                        </details>
+                        <div class="flex items-start gap-3">
+                            <input id="acepta" name="acepta" type="checkbox" value="si" data-error="Debes aceptar los términos y condiciones para enviar la inscripción." aria-describedby="error-acepta" required class="mt-1 size-5 accent-verde-ruta focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-crema dark:focus-visible:ring-offset-azul-noche">
+                            <label for="acepta" class="text-azul-noche dark:text-crema">Acepto los términos y condiciones.</label>
+                        </div>
+                        <p id="error-acepta" class="mt-2 hidden text-sm text-red-700 dark:text-red-300"></p>
+                    </fieldset>
+
+                    <button type="submit" class="boton-ruta">Enviar inscripción</button>
+                </form>
+            </div>
+        </section>
+
+        
     </main> 
 
     <footer class="bg-azul-noche text-crema dark:bg-azul-noche/95 dark:text-crema"> 
-        <div class="mx-auto max-w-5xl px-6 py-12"> 
-            <div class="flex flex-col gap-8 md:flex-row md:justify-between"> 
+        <div class="max-w-5xl mx-auto px-6 py-12"> 
+            <div class="flex flex-col md:flex-row md:justify-between gap-8"> 
                 <div>
                     <h2 class="font-montserrat">Rueda Libre</h2>
                     <p>Recorridos nocturnos en bicicleta.</p>
@@ -221,6 +409,55 @@
             </div> 
         </div> 
     </footer> 
+
+    <script>
+        const formInscripcion = document.getElementById('form-inscripcion');
+        const camposInscripcion = Array.from(formInscripcion.querySelectorAll('input, select'));
+        let intentoEnvio = false;
+
+        function actualizarValidacion() {
+            const camposInvalidos = camposInscripcion.filter((campo) => !campo.validity.valid);
+
+            camposInscripcion.forEach((campo) => {
+                const mensaje = document.getElementById(`error-${campo.id}`);
+                if (!mensaje) return;
+
+                if (intentoEnvio && !campo.validity.valid) {
+                    campo.setAttribute('aria-invalid', 'true');
+                    mensaje.textContent = campo.dataset.error;
+                    mensaje.classList.remove('hidden');
+                } else {
+                    campo.removeAttribute('aria-invalid');
+                    mensaje.textContent = '';
+                    mensaje.classList.add('hidden');
+                }
+            });
+
+            return camposInvalidos;
+        }
+
+        formInscripcion.addEventListener('submit', (evento) => {
+            intentoEnvio = true;
+            const camposInvalidos = actualizarValidacion();
+
+            if (camposInvalidos.length > 0) {
+                evento.preventDefault();
+                camposInvalidos[0].focus();
+                return;
+            }
+
+            evento.preventDefault();
+        });
+
+        camposInscripcion.forEach((campo) => {
+            campo.addEventListener('input', () => {
+                if (intentoEnvio) actualizarValidacion();
+            });
+            campo.addEventListener('change', () => {
+                if (intentoEnvio) actualizarValidacion();
+            });
+        });
+    </script>
 
 </body>
 </html>

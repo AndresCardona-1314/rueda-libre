@@ -15,3 +15,21 @@
     --font-open-sans: "Open Sans", sans-serif;
     
 }
+
+@layer components {
+  .boton-ruta {
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-transparent
+      px-6 py-3
+      font-semibold
+      bg-verde-ruta text-crema
+      transition-colors hover:bg-verde-ruta/80 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-naranja-pedal focus-visible:ring-offset-2 focus-visible:ring-offset-azul-noche;
+  }
+
+  .boton-ruta-reserva {
+    @apply w-full mt-4 text-base;
+  }
+
+  .boton-ruta-inscripcion {
+    @apply mt-5;
+  }
+}
